@@ -9,7 +9,7 @@ class Database
 
   private $server     = 'localhost',
           $username   = 'root',
-          $password   = 'root',
+          $password   = '',
           $db_name    = 'e_mall';
 
   private $_conn;

@@ -1,312 +1,129 @@
-<?php require_once 'templates/data.php'; ?>
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
+
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Home - Electronic Mall</title>
+    <title>e-Learning | Student</title>
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet">
 
-    <!-- Animation CSS -->
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
-
-    <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="assets/css/style.css">
-
-
-    <!-- FormValidation CSS file -->
-    <link rel="stylesheet" href="assets/css/formValidation.min.css">
-
-    <!-- Ladda style -->
-    <link rel="stylesheet" href="assets/css/plugins/ladda/ladda-themeless.min.css">
-
-    <!-- FooTable -->
-    <link rel="stylesheet" href="assets/css/plugins/footable/footable.core.css">
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
 
 </head>
 
-<?php require_once 'templates/header.php'; ?>
+<body>
 
-<section class="container top-container">
-    <div class="row">
-        <div class="title-header" class="col-sm-12">
-            <h1><b> The Categories</b></h1>
+<div id="wrapper">
+
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element">
+                            <span>
+                                <img alt="image" class="img-circle" src="assets/img/profile_small.jpg" />
+                            </span>
+                            <a href="#">
+                                <span class="clear">
+                                    <span class="block m-t-xs"> <strong class="font-bold">David Williams</strong></span>
+                                    <span class="text-muted text-xs block">Student</span>
+                                </span>
+                            </a>
+                    </div>
+                    <div class="logo-element">
+                        EL
+                    </div>
+                </li>
+                <li class="active">
+                    <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">Home</span></a>
+                </li>
+                <!-- <li>
+                    <a href="#"><i class="fa fa-user"></i> <span class="nav-label">Manage Profile</span> </a>
+                    <ul class="nav nav-second-level collapse">
+                            <li><a href="#">My Account</a></li>
+                            <li>
+                                <a href="#">Bank Account</a></li>
+                            <li>
+                                <a href="#">Reset Password</a></li>
+                        </ul>
+                </li> -->
+                <li>
+                    <a href="#"><i class="fa fa-user"></i> <span class="nav-label">My Profile</span> </a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-book"></i> <span class="nav-label">List Courses</span> </a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-bookmark"></i> <span class="nav-label">My Courses</span> </a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-exchange"></i> <span class="nav-label">Assignment</span> </a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-area-chart"></i> <span class="nav-label">Grade</span> </a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-users"></i> <span class="nav-label">Forum</span> </a>
+                </li>
+                <!-- <li>
+                    <a href="#"><i class="fa fa-child"></i> <span class="nav-label">About</span> </a>
+                </li> -->
+            </ul>
+
         </div>
+    </nav>
+
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                    <form role="search" class="navbar-form-custom" method="post" action="#">
+                        <div class="form-group">
+                            <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
+                        </div>
+                    </form>
+                </div>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-sign-out"></i> Log out
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-center m-t-lg">
+                        <h1>
+                            Welcome in INSPINIA Static SeedProject
+                        </h1>
+                        <small>
+                            It is an application skeleton for a typical web app. You can use it to quickly bootstrap your webapp projects and dev environment for these projects.
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="pull-right">
+                <strong>Copyright</strong> e-learning Co., Ltd. &copy; 2016
+            </div>
+        </div>
+
     </div>
-</section>
-
-<section id="features" class="container services">
-    <div class="row">
-        <div class="col-sm-3">
-            <img src="https://placeimg.com/180/170/tech" alt="Product">
-            <h2>Elektronics</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-            <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
-        </div>
-        <div class="col-sm-3">
-            <img src="https://placeimg.com/180/170/tech" alt="Product">
-            <h2>Healty</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-            <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
-        </div>
-        <div class="col-sm-3">
-            <img src="https://placeimg.com/180/170/tech" alt="Product">
-            <h2>Food</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-            <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
-        </div>
-        <div class="col-sm-3">
-            <img src="https://placeimg.com/180/170/tech" alt="Product">
-            <h2>Book</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-            <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
-        </div>
-    </div>
-</section>
-
-<section id="features" class="container services">
-    <div class="row">
-        <div class="col-sm-2">
-            <img src="https://placeimg.com/180/170/tech" alt="Product">
-            <h2>Elektronics</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-            <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
-        </div>
-        <div class="col-sm-2">
-            <img src="https://placeimg.com/180/170/tech" alt="Product">
-            <h2>Healty</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-            <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
-        </div>
-        <div class="col-sm-2">
-            <img src="https://placeimg.com/180/170/tech" alt="Product">
-            <h2>Food</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-            <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
-        </div>
-        <div class="col-sm-2">
-            <img src="https://placeimg.com/180/170/tech" alt="Product">
-            <h2>Book</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-            <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
-        </div>
-        <div class="col-sm-2">
-            <img src="https://placeimg.com/180/170/tech" alt="Product">
-            <h2>Food</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-            <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
-        </div>
-        <div class="col-sm-2">
-            <img src="https://placeimg.com/180/170/tech" alt="Product">
-            <h2>Book</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-            <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
-        </div>
-    </div>
-</section>
-
-<section class="container">
-    <div class="row">
-        <div id="title-header" class="col-sm-12">
-            <h1><b>Populer Products</b></h1>
-        </div>
-    </div>
-</section>
-
-<section id="features" class="container services wow fadeInRight">
-    <div class="row">
-        <div class="col-md-3">
-            <div class="ibox">
-                <div class="ibox-content product-box">
-                    <div class="product-imitation">
-                        <img src="https://placeimg.com/260/200/any">
-                    </div>
-                    <div class="product-desc">
-                        <span class="product-price">
-                                    $10
-                        </span>
-                        <small class="text-muted">Category</small>
-                        <a href="#" class="product-name"> Product</a>
-                        <div class="small m-t-xs">
-                            Many desktop publishing packages and web page editors now.
-                        </div>
-                        <div class="m-t text-righ">
-                            <a href="#" class="btn btn-xs btn-outline btn-primary">Details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="ibox">
-                <div class="ibox-content product-box">
-                    <div class="product-imitation">
-                      <img src="https://placeimg.com/260/200/any">
-                    </div>
-                    <div class="product-desc">
-                        <span class="product-price">
-                                    $10
-                        </span>
-                        <small class="text-muted">Category</small>
-                        <a href="#" class="product-name"> Product</a>
-                        <div class="small m-t-xs">
-                            Many desktop publishing packages and web page editors now.
-                        </div>
-                        <div class="m-t text-righ">
-                            <a href="#" class="btn btn-xs btn-outline btn-primary">Details </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="ibox">
-                <div class="ibox-content product-box">
-                    <div class="product-imitation">
-                      <img src="https://placeimg.com/260/200/any">
-                    </div>
-                    <div class="product-desc">
-                        <span class="product-price">
-                                    $10
-                        </span>
-                        <small class="text-muted">Category</small>
-                        <a href="#" class="product-name"> Product</a>
-                        <div class="small m-t-xs">
-                            Many desktop publishing packages and web page editors now.
-                        </div>
-                        <div class="m-t text-righ">
-                            <a href="#" class="btn btn-xs btn-outline btn-primary">Details </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="ibox">
-                <div class="ibox-content product-box">
-                    <div class="product-imitation">
-                      <img src="https://placeimg.com/260/200/any">
-                    </div>
-                    <div class="product-desc">
-                        <span class="product-price">
-                                    $10
-                        </span>
-                        <small class="text-muted">Category</small>
-                        <a href="#" class="product-name"> Product</a>
-                        <div class="small m-t-xs">
-                            Many desktop publishing packages and web page editors now.
-                        </div>
-                        <div class="m-t text-righ">
-                            <a href="#" class="btn btn-xs btn-outline btn-primary">Details </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="ibox">
-                <div class="ibox-content product-box">
-                    <div class="product-imitation">
-                      <img src="https://placeimg.com/260/200/any">
-                    </div>
-                    <div class="product-desc">
-                        <span class="product-price">
-                                    $10
-                        </span>
-                        <small class="text-muted">Category</small>
-                        <a href="#" class="product-name"> Product</a>
-                        <div class="small m-t-xs">
-                            Many desktop publishing packages and web page editors now.
-                        </div>
-                        <div class="m-t text-righ">
-                            <a href="#" class="btn btn-xs btn-outline btn-primary">Details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="ibox">
-                <div class="ibox-content product-box">
-                    <div class="product-imitation">
-                      <img src="https://placeimg.com/260/200/any">
-                    </div>
-                    <div class="product-desc">
-                        <span class="product-price">
-                                    $10
-                        </span>
-                        <small class="text-muted">Category</small>
-                        <a href="#" class="product-name"> Product</a>
-                        <div class="small m-t-xs">
-                            Many desktop publishing packages and web page editors now.
-                        </div>
-                        <div class="m-t text-righ">
-                            <a href="#" class="btn btn-xs btn-outline btn-primary">Details </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="ibox">
-                <div class="ibox-content product-box">
-                    <div class="product-imitation">
-                      <img src="https://placeimg.com/260/200/any">
-                    </div>
-                    <div class="product-desc">
-                        <span class="product-price">
-                                    $10
-                        </span>
-                        <small class="text-muted">Category</small>
-                        <a href="#" class="product-name"> Product</a>
-                        <div class="small m-t-xs">
-                            Many desktop publishing packages and web page editors now.
-                        </div>
-                        <div class="m-t text-righ">
-                            <a href="#" class="btn btn-xs btn-outline btn-primary">Details </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="ibox">
-                <div class="ibox-content product-box">
-                    <div class="product-imitation">
-                        <img src="https://placeimg.com/260/200/any">
-                    </div>
-                    <div class="product-desc">
-                        <span class="product-price">
-                                    $10
-                        </span>
-                        <small class="text-muted">Category</small>
-                        <a href="#" class="product-name"> Product</a>
-                        <div class="small m-t-xs">
-                            Many desktop publishing packages and web page editors now.
-                        </div>
-                        <div class="m-t text-righ">
-                            <a href="#" class="btn btn-xs btn-outline btn-primary">Details </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<?php require_once 'templates/footer.php'; ?>
-
+</div>
 
 <!-- Mainly scripts -->
-<script src="assets/js/jquery-3.1.0.min.js"></script>
+<script src="assets/js/jquery-2.1.1.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/plugins/metisMenu/jquery.metisMenu.js"></script>
 <script src="assets/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
@@ -314,10 +131,8 @@
 <!-- Custom and plugin javascript -->
 <script src="assets/js/inspinia.js"></script>
 <script src="assets/js/plugins/pace/pace.min.js"></script>
-<script src="assets/js/plugins/wow/wow.min.js"></script>
 
-<!-- Custom Js -->
-<script src="assets/js/custom/custom.js"></script>
 
 </body>
+
 </html>
