@@ -25,9 +25,9 @@
     <div class="middle-box text-center loginscreen animated fadeInDown">
         <div>
             <div>
-                <h1 class="logo-name">EM</h1>
+                <h1 class="logo-name">EL</h1>
             </div>
-            <h3>Register to EM</h3>
+            <h3>Register to EL</h3>
             <p>Create account to see it in action.</p>
             <div id="message">
                 <!-- Message -->

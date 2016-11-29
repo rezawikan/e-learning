@@ -16,10 +16,13 @@
 
     <link href="assets/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
 
+
 </head>
 
 <body>
+
 <div id="wrapper">
+
     <nav class="navbar-default navbar-static-side" role="navigation">
         <div class="sidebar-collapse">
             <ul class="nav metismenu" id="side-menu">
@@ -30,8 +33,8 @@
                             </span>
                             <a href="#">
                                 <span class="clear">
-                                    <span class="block m-t-xs"> <strong class="font-bold">Daniel Toms</strong></span>
-                                    <span class="text-muted text-xs block">Student</span>
+                                    <span class="block m-t-xs"> <strong class="font-bold">John Low</strong></span>
+                                    <span class="text-muted text-xs block">Lecturer</span>
                                 </span>
                             </a>
                     </div>
@@ -48,7 +51,7 @@
                 <li>
                     <a href="list-courses.php"><i class="fa fa-book"></i> <span class="nav-label">List Courses</span> </a>
                 </li>
-                <li>
+                <li >
                     <a href="my-courses.php"><i class="fa fa-bookmark"></i> <span class="nav-label">My Courses</span> </a>
                 </li>
                 <li>
@@ -69,6 +72,7 @@
                     <a href="Quiz.php"><i class="fa fa-users"></i> <span class="nav-label">Quiz</span> </a>
                 </li>
             </ul>
+
         </div>
     </nav>
 
@@ -77,6 +81,7 @@
             <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
                 <div class="navbar-header">
                     <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+
                 </div>
                 <ul class="nav navbar-top-links navbar-right">
                     <li>
@@ -85,6 +90,7 @@
                         </a>
                     </li>
                 </ul>
+
             </nav>
         </div>
         <div class="row wrapper border-bottom white-bg page-heading">
@@ -100,7 +106,6 @@
               </ol>
           </div>
           <div class="col-lg-2">
-          </div>
 
           </div>
         </div>
@@ -170,7 +175,7 @@
                     </div>
                 </div>
             </div>
-                <div class="col-lg-5">
+            <div class="col-lg-5">
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
                             <h5>Update Password</h5>
@@ -243,4 +248,5 @@
 </script>
 
 </body>
+
 </html>
