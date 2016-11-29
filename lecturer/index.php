@@ -9,14 +9,14 @@
     <title>E-Learning | Login</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
 
     <!-- Animation CSS -->
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/animate.css">
+    <link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.min.css">
 
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 
 </head>
 
@@ -25,10 +25,12 @@
     <div class="middle-box text-center loginscreen animated fadeInDown">
         <div>
             <div>
+
                 <h1 class="logo-name block-center">EL</h1>
+
             </div>
             <h3>Welcome to E-Learning</h3>
-            <p>Students of HELP University</p>
+            <p>Lecturer of HELP University</p>
             <p id="message"></p>
             <form id="form-signin" class="m-t" role="form" method="POST">
                 <div class="form-group">
@@ -48,8 +50,8 @@
     </div>
 
     <!-- Mainly scripts -->
-    <script src="assets/js/jquery-2.2.3.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery-2.2.3.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
 </body>
 
 </html>

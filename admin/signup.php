@@ -7,21 +7,22 @@
     <title>E-Learning | Sign Up</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
 
     <!-- Animation CSS -->
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/animate.css">
+    <link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.min.css">
 
     <!-- Plugins CSS iCheck -->
-     <link rel="stylesheet" href="assets/css/plugins/iCheck/custom.css">
+     <link rel="stylesheet" href="../assets/css/plugins/iCheck/custom.css">
 
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 
 </head>
 
 <body class="gray-bg">
+
     <div class="middle-box text-center loginscreen animated fadeInDown">
         <div>
             <div>
@@ -71,11 +72,11 @@
     </div>
 
     <!-- Mainly scripts -->
-    <script src="assets/js/jquery-2.2.3.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery-2.2.3.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
 
     <!-- iCheck -->
-    <script src="assets/js/plugins/iCheck/icheck.min.js"></script>
+    <script src="../assets/js/plugins/iCheck/icheck.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
         $('.i-checks').icheck( {
