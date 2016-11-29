@@ -64,7 +64,7 @@
                     <a href="Score.php"><i class="fa fa-area-chart"></i> <span class="nav-label">Score</span> </a>
                 </li>
                 <li>
-                    <a href="forum.php"><i class="fa fa-users"></i> <span class="nav-label">Quiz</span> </a>
+                    <a href="quiz.php"><i class="fa fa-users"></i> <span class="nav-label">Quiz</span> </a>
                 </li>
             </ul>
 

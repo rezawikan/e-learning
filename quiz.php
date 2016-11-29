@@ -95,11 +95,8 @@
                   <li>
                       <a href="index.html">Home</a>
                   </li>
-                  <li>
-                      <a href="#">Assignment</a>
-                  </li>
                   <li class="active">
-                      <strong>Upload Assignment</strong>
+                      <strong>Quiz</strong></strong>
                   </li>
               </ol>
           </div>
@@ -112,7 +109,7 @@
             <div class="col-lg-7">
                 <div class="ibox float-e-margins">
                     <div class="ibox-title">
-                        <h5>Upload Assignment</h5>
+                        <h5>Quiz</h5>
                         <div class="ibox-tools">
                             <a class="collapse-link">
                                 <i class="fa fa-chevron-up"></i>
@@ -125,25 +122,65 @@
                     <div class="ibox-content">
                         <div class="row">
                             <div class="col-sm-12">
-                                <form role="form">
-                                    <div class="form-group">
-                                      <label>Course Code</label>
-                                      <select name="course-code" class="form-control">
-                                        <option value="">Select</option>
-                                        <option value="">BIT106</option>
-                                        <option value="">BIT109</option>
-                                        <option value="">BIT101</option>
-                                      </select>
-                                    </div>
-                                    <div class="form-group">
-                                      <label>Assignment Files</label>
-                                      <input type="file" name="username" class="form-control">
-                                      <p class="help-block">Only .rar</p>
-                                    </div>
-                                    <div>
-                                        <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>Submit</strong></button>
-                                    </div>
-                                </form>
+                              <div class="ibox-content">
+
+
+                          <div class="table-responsive">
+                              <table class="table shoping-cart-table">
+
+                                  <tbody>
+                                  <tr>
+                                      <td colspan="4" class="desc">
+                                          <h3>
+                                          <a href="#" class="text-navy">
+                                              Programming
+                                          </a>
+                                          </h3>
+                                          <p class="small">
+                                              It is a long established fact that a reader will be distracted by the readable
+                                              content of a page when looking at its layout. The point of using Lorem Ipsum is
+                                          </p>
+                                          <dl class="small m-b-none">
+                                              <dt>Description </dt>
+                                              <dd>A description list is perfect for defining terms.</dd>
+                                          </dl>
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                        <span class="label label-default">A</span>
+                                          <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios"> I'm Fine
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                    <td >
+                                      <span class="label label-default">B</span>
+                                        <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios"> I'm Right
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <span class="label label-default">C</span>
+                                      <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios"> I'm Happy
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <span class="label label-default">D</span>
+                                      <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios"> I'm ALone
+                                    </td>
+                                  </tr>
+                                  </tbody>
+                              </table>
+                              <hr />
+                              <div class="">
+                                <button type="button" class='btn btn-primary' name="button">Submit</button>
+                                <span class="pull-right">1 of 25</span>
+                              </div>
+
+                          </div>
+
+                      </div>
                             </div>
                         </div>
                     </div>
