@@ -106,113 +106,123 @@
 
         <div class="wrapper wrapper-content animated fadeInRight">
             <div class="row">
-            <div class="col-lg-7">
-                <div class="ibox float-e-margins">
-                    <div class="ibox-title">
-                        <h5>Quiz</h5>
-                        <div class="ibox-tools">
-                            <a class="collapse-link">
-                                <i class="fa fa-chevron-up"></i>
-                            </a>
-                            <a class="close-link">
-                                <i class="fa fa-times"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="ibox-content">
-                        <div class="row">
-                            <div class="col-sm-12">
-                              <div class="ibox-content">
-
-
-                          <div class="table-responsive">
-                              <table class="table shoping-cart-table">
-
-                                  <tbody>
-                                  <tr>
-                                      <td colspan="4" class="desc">
-                                          <h3>
-                                          <a href="#" class="text-navy">
-                                              Programming
-                                          </a>
-                                          </h3>
-                                          <p class="small">
-                                              It is a long established fact that a reader will be distracted by the readable
-                                              content of a page when looking at its layout. The point of using Lorem Ipsum is
-                                          </p>
-                                          <dl class="small m-b-none">
-                                              <dt>Description </dt>
-                                              <dd>A description list is perfect for defining terms.</dd>
-                                          </dl>
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                      <td>
-                                        <span class="label label-default">A</span>
-                                          <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios"> I'm Fine
-                                      </td>
-                                  </tr>
-                                  <tr>
-                                    <td >
-                                      <span class="label label-default">B</span>
-                                        <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios"> I'm Right
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                      <span class="label label-default">C</span>
-                                      <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios"> I'm Happy
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                      <span class="label label-default">D</span>
-                                      <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios"> I'm ALone
-                                    </td>
-                                  </tr>
-                                  </tbody>
-                              </table>
-                              <hr />
-                              <div class="">
-                                <button type="button" class='btn btn-primary' name="button">Submit</button>
-                                <span class="pull-right">1 of 25</span>
-                              </div>
-
+              <div class="col-lg-5">
+                  <div class="ibox float-e-margins">
+                      <div class="ibox-title">
+                          <h5>Select Quiz</h5>
+                          <div class="ibox-tools">
+                              <a class="collapse-link">
+                                  <i class="fa fa-chevron-up"></i>
+                              </a>
+                              <a class="close-link">
+                                  <i class="fa fa-times"></i>
+                              </a>
                           </div>
-
                       </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-                <div class="col-lg-5">
-                    <div class="ibox float-e-margins">
-                        <div class="ibox-title">
-                            <h5>Tips</h5>
-                            <div class="ibox-tools">
-                                <a class="collapse-link">
-                                    <i class="fa fa-chevron-up"></i>
-                                </a>
-                                <a class="close-link">
-                                    <i class="fa fa-times"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="ibox-content">
+                      <div class="ibox-content">
                           <div class="row">
                               <div class="col-sm-12">
-                                <ol>
-                                  <li>First</li>
-                                  <li>Second</li>
-                                  <li>Third</li>
-                                  <li>Fourth</li>
-                                </ol>
+                                <form role="form">
+                                    <div class="form-group">
+                                      <label>Subject ID</label>
+                                      <select name="subject-id" class="form-control">
+                                        <option value="">Select</option>
+                                        <option value="">BIT106</option>
+                                        <option value="">BIT109</option>
+                                        <option value="">BIT101</option>
+                                      </select>
+                                    </div>
+                                    <div class="form-group">
+                                      <label>Number</label>
+                                      <select name="subject-id" class="form-control">
+                                        <option value="">Select</option>
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                      </select>
+                                    </div>
+                                    <div>
+                                        <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>Submit</strong></button>
+                                    </div>
+                                </form>
                               </div>
                           </div>
-                        </div>
-                    </div>
-                </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-7">
+                  <div class="ibox float-e-margins">
+                      <div class="ibox-title">
+                          <h5>Quiz</h5>
+                          <div class="ibox-tools">
+                              <a class="collapse-link">
+                                  <i class="fa fa-chevron-up"></i>
+                              </a>
+                              <a class="close-link">
+                                  <i class="fa fa-times"></i>
+                              </a>
+                          </div>
+                      </div>
+                      <div class="ibox-content">
+                          <div class="row">
+                              <div class="col-sm-12">
+                                <div class="table-responsive">
+                                  <table class="table shoping-cart-table">
+                                    <tbody>
+                                    <tr>
+                                        <td colspan="4" class="desc">
+                                            <h3>
+                                            <a href="#" class="text-navy">
+                                                Programming
+                                            </a>
+                                            </h3>
+                                            <p class="small">
+                                                It is a long established fact that a reader will be distracted by the readable
+                                                content of a page when looking at its layout. The point of using Lorem Ipsum is
+                                            </p>
+                                            <dl class="small m-b-none">
+                                                <dt>Description </dt>
+                                                <dd>A description list is perfect for defining terms.</dd>
+                                            </dl>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                          <span class="label label-default">A</span>
+                                            <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios"> I'm Fine
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                      <td >
+                                        <span class="label label-default">B</span>
+                                          <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios"> I'm Right
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <span class="label label-default">C</span>
+                                        <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios"> I'm Happy
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <span class="label label-default">D</span>
+                                        <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios"> I'm ALone
+                                      </td>
+                                    </tr>
+                                    </tbody>
+                                  </table>
+                                  <hr />
+                                  <div class="">
+                                    <button type="button" class='btn btn-primary' name="button">Next</button>
+                                    <span class="pull-right">1 of 25</span>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
             </div>
         </div>
 
