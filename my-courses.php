@@ -245,7 +245,7 @@
 <script src="assets/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
 <!-- Custom and plugin javascript -->
-<script src="assets/js/inspinia.js"></script>
+<script src="assets/js/theme.js"></script>
 <script src="assets/js/plugins/pace/pace.min.js"></script>
 
 <!-- Data picker -->

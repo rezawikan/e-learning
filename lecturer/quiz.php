@@ -73,7 +73,7 @@
             <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
                 <div class="navbar-header">
                     <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
-                    
+
                 </div>
                 <ul class="nav navbar-top-links navbar-right">
                     <li>
@@ -325,7 +325,7 @@
 <script src="../assets/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
 <!-- Custom and plugin javascript -->
-<script src="../assets/js/inspinia.js"></script>
+<script src="../assets/js/theme.js"></script>
 <script src="../assets/js/plugins/pace/pace.min.js"></script>
 
 <!-- Data picker -->

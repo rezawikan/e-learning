@@ -52,10 +52,10 @@
                     <a href="my-courses.php"><i class="fa fa-bookmark"></i> <span class="nav-label">My Courses</span> </a>
                 </li>
                 <li>
-                  <a href="#"><i class="fa fa-exchange"></i> <span class="nav-label">Quiz</span> </a>
+                  <a href="#"><i class="fa fa-exchange"></i> <span class="nav-label">Assignment</span> </a>
                   <ul class="nav nav-second-level collapse">
                     <li>
-                      <a href="upload-assignment.php">Quiz</a>
+                      <a href="upload-assignment.php">Upload Assignment</a>
                     </li>
                     <li>
                         <a href="assignment.php"> View Assignment</a>
@@ -90,7 +90,7 @@
         </div>
         <div class="row wrapper border-bottom white-bg page-heading">
           <div class="col-lg-10">
-              <h2>Upload Assignment</h2>
+              <h2>Quiz</h2>
               <ol class="breadcrumb">
                   <li>
                       <a href="index.html">Home</a>
@@ -232,7 +232,7 @@
 <script src="assets/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
 <!-- Custom and plugin javascript -->
-<script src="assets/js/inspinia.js"></script>
+<script src="assets/js/theme.js"></script>
 <script src="assets/js/plugins/pace/pace.min.js"></script>
 
 <!-- Data picker -->
