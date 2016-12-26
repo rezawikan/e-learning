@@ -19,6 +19,16 @@
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <!-- FormValidation CSS file -->
+    <link rel="stylesheet" href="assets/css/formValidation.min.css">
+
+    <!-- Ladda style -->
+    <link rel="stylesheet" href="assets/css/plugins/ladda/ladda-themeless.min.css">
+
+    <!-- Date Picker -->
+    <link rel="stylesheet" href="assets/css/plugins/datapicker/datepicker3.css" >
+
+
 </head>
 
 <body class="gray-bg">
@@ -48,9 +58,17 @@
                 <div class="form-group">
                     <select class="form-control" name="gender">
                       <option value="">Select</option>
-                      <option value="">Man</option>
-                      <option value="">Women</option>
+                      <option value="man">Male</option>
+                      <option value="women">Women</option>
                     </select>
+                </div>
+                <div class="form-group">
+                    <div class="input-group input-append date" id="datePicker">
+                      <input type="text" name="date" class="form-control">
+                      <span class="input-group-addon">
+                        <i class="fa fa-calendar"></i>
+                      </span>
+                    </div>
                 </div>
                 <div class="form-group">
                     <input type="password" class="form-control" placeholder="Password" name="password">
@@ -61,10 +79,10 @@
                 <div class="form-group">
                         <div class="checkbox i-checks"><label> <input type="checkbox" name="agree" required><i></i> Agree the terms and policy </label></div>
                 </div>
-                <button type="submit" class="btn btn-primary block full-width m-b"  data-style="expand-right" name="btn-signup">Sign Up</button>
+                <button type="submit" class="btn btn-primary block full-width m-b ladda-button"  data-style="expand-right" name="btn-signup">Sign Up</button>
 
                 <p class="text-muted text-center"><small>Already have an account?</small></p>
-                <a class="btn btn-sm btn-white btn-block" href="login.php">Login</a>
+                <a class="btn btn-sm btn-white btn-block" href="index.php">Login</a>
             </form>
             <p class="m-t"> <small>E-Mall we app framework base on Bootstrap 3 &copy; 2016</small> </p>
         </div>
@@ -76,11 +94,28 @@
 
     <!-- iCheck -->
     <script src="assets/js/plugins/iCheck/icheck.min.js"></script>
+
+    <!-- FormValidation plugin and the class supports validating Bootstrap form -->
+    <script src="assets/js/formValidation.min.js"></script>
+    <script src="assets/js/framework/bootstrap.min.js"></script>
+
+    <!-- Ladda -->
+    <script src="assets/js/plugins/ladda/spin.min.js"></script>
+    <script src="assets/js/plugins/ladda/ladda.min.js"></script>
+    <script src="assets/js/plugins/ladda/ladda.jquery.min.js"></script>
+
+    <!-- Custom js -->
+    <script src="assets/js/custom.js"></script>
+
+    <!-- Sign Up -->
+    <script src="assets/js/page/signup.js"></script>
+
+    <!-- Data picker -->
+    <script src="assets/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+
     <script type="text/javascript">
       $(document).ready(function() {
-        $('.i-checks').icheck( {
-        tap: true, checkboxClass: 'icheckbox_square-green', radioClass: 'iradio_square-green', increaseArea: '20%' // optional
-      });
+
       });
     </script>
 

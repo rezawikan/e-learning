@@ -1,3 +1,4 @@
+<?php require_once 'templates/data.php'; ?>
 <!DOCTYPE html>
 <html>
 
@@ -30,7 +31,7 @@
                             </span>
                             <a href="#">
                                 <span class="clear">
-                                    <span class="block m-t-xs"> <strong class="font-bold">Daniel Toms</strong></span>
+                                    <span class="block m-t-xs"> <strong class="font-bold"><?php echo $user->fullName; ?></strong></span>
                                     <span class="text-muted text-xs block">Student</span>
                                 </span>
                             </a>
@@ -81,7 +82,7 @@
                 </div>
                 <ul class="nav navbar-top-links navbar-right">
                     <li>
-                        <a href="#">
+                        <a href="logout.php">
                             <i class="fa fa-sign-out"></i> Log out
                         </a>
                     </li>
@@ -190,7 +191,7 @@
 </div>
 
 <!-- Mainly scripts -->
-<script src="assets/js/jquery-2.1.1.js"></script>
+<script src="assets/js/jquery-2.2.3.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/plugins/metisMenu/jquery.metisMenu.js"></script>
 <script src="assets/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
