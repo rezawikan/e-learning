@@ -20,8 +20,8 @@ $home_url  = '../../index.php'; // redirect link
 
       $a = password_verify('rezawikan01' ,$result->password);
 
-      echo $result->password;
+      // echo $result->password;
       echo "</br>";
-      echo password_hash('rezawikan01', PASSWORD_DEFAULT);
+      echo password_hash('wikandito', PASSWORD_DEFAULT);
       echo "</br>";
       var_dump($a);

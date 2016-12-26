@@ -1,3 +1,21 @@
+<?php
+session_start();
+require_once 'vendor/autoload.php';
+
+use Elearn\Auth\Token;
+use Elearn\Auth\Redirect;
+use Elearn\Auth\Authentication;
+
+$log = new Authentication;
+
+
+if ($log->is_logged_in()) {
+    Redirect::to('home.php');
+}
+
+
+ ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -9,14 +27,20 @@
     <title>E-Learning | Login</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
     <!-- Animation CSS -->
-    <link rel="stylesheet" href="../assets/css/animate.css">
-    <link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
 
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- FormValidation CSS file -->
+    <link rel="stylesheet" href="assets/css/formValidation.min.css">
+
+    <!-- Ladda style -->
+    <link rel="stylesheet" href="assets/css/plugins/ladda/ladda-themeless.min.css">
 
 </head>
 
@@ -25,9 +49,7 @@
     <div class="middle-box text-center loginscreen animated fadeInDown">
         <div>
             <div>
-
                 <h1 class="logo-name block-center">EL</h1>
-
             </div>
             <h3>Welcome to E-Learning</h3>
             <p>Administrator of HELP University</p>
@@ -38,8 +60,9 @@
                 </div>
                 <div id="password" class="form-group">
                     <input type="password" class="form-control" placeholder="Password" name="password" required>
+                    <input type="hidden" class="form-control" name="token" value="<?php echo Token::generateToken(); ?>" required>
                 </div>
-                <button type="submit" class="btn btn-primary block full-width m-b" name="btn-login">Login</button>
+                <button type="submit" class="btn btn-primary block full-width m-b ladda-button" name="btn-login">Login</button>
 
                 <a href="forgot_password.php"><small>Forgot password?</small></a>
                 <p class="text-muted text-center"><small>Do not have an account?</small></p>
@@ -50,8 +73,20 @@
     </div>
 
     <!-- Mainly scripts -->
-    <script src="../assets/js/jquery-2.2.3.js"></script>
-    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery-2.2.3.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- FormValidation plugin and the class supports validating Bootstrap form -->
+    <script src="assets/js/formValidation.min.js"></script>
+    <script src="assets/js/framework/bootstrap.min.js"></script>
+
+    <!-- Ladda -->
+    <script src="assets/js/plugins/ladda/spin.min.js"></script>
+    <script src="assets/js/plugins/ladda/ladda.min.js"></script>
+    <script src="assets/js/plugins/ladda/ladda.jquery.min.js"></script>
+
+    <!-- Sign Up -->
+    <script src="assets/js/page/signin.js"></script>
 </body>
 
 </html>

@@ -1,20 +1,3 @@
-<?php
-
-  session_start();
-  require_once 'vendor/autoload.php';
-
-  use Elearn\Auth\Authentication;
-  use Elearn\Auth\Token;
-  use Elearn\Auth\Redirect;
-
-  // $seller_login = new Authentication;
-  //
-  // if($seller_login->is_logged_in()){
-  //     Redirect::to("home.php");
-  // }
-
-  ?>
-
 <!DOCTYPE html>
 <html>
 
@@ -83,7 +66,7 @@
     <script src="assets/js/plugins/ladda/spin.min.js"></script>
     <script src="assets/js/plugins/ladda/ladda.min.js"></script>
     <script src="assets/js/plugins/ladda/ladda.jquery.min.js"></script>
-    
+
     <!-- Sign Up -->
     <script src="assets/js/page/signin.js"></script>
 </body>
