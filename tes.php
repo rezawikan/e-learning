@@ -14,14 +14,23 @@ $home_url  = '../../index.php'; // redirect link
     	// $a = $student->login('rezawikan', 'rezawikan01'); // checking to login
       // var_dump($a);
 
-      $conn = Database::getInstance();
-      $conn->setTable('students');
-      $result = $conn->select()->where('username','=','rezawikan')->first();
+      // $conn = Database::getInstance();
+      // $conn->setTable('students');
+      // $result = $conn->select()->where('username','=','rezawikan')->first();
+      //
+      // $a = password_verify('rezawikan01' ,$result->password);
+      //
+      // // echo $result->password;
+      // echo "</br>";
+      // echo password_hash('wikandito', PASSWORD_DEFAULT);
+      // echo "</br>";
+      // var_dump($a);
 
-      $a = password_verify('rezawikan01' ,$result->password);
+      // $last_access = "12/11/26";
 
-      // echo $result->password;
-      echo "</br>";
-      echo password_hash('wikandito', PASSWORD_DEFAULT);
-      echo "</br>";
-      var_dump($a);
+      $time = strtotime('10/16/2003');
+
+      $newformat = date('Y-m-d',$time);
+
+      echo $newformat;
+?>

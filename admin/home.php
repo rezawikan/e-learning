@@ -26,12 +26,9 @@
             <ul class="nav metismenu" id="side-menu">
                 <li class="nav-header">
                     <div class="dropdown profile-element">
-                            <span>
-                                <img alt="image" class="img-circle" src="../assets/img/profile_small.jpg" />
-                            </span>
                             <a href="#">
                                 <span class="clear">
-                                    <span class="block m-t-xs"> <strong class="font-bold">Western Jack</strong></span>
+                                    <span class="block m-t-xs"> <strong class="font-bold"><?php echo $user->fullName; ?></strong></span>
                                     <span class="text-muted text-xs block">Administrator</span>
                                 </span>
                             </a>
@@ -41,19 +38,22 @@
                     </div>
                 </li>
                 <li class="active">
-                    <a href="home.php"><i class="fa fa-th-large"></i> <span class="nav-label">Home</span></a>
+                    <a href="home.php"><i class="fa fa-th-large" aria-hidden="true"></i> <span class="nav-label">Home</span></a>
                 </li>
                 <li>
-                    <a href="my-profile.php"><i class="fa fa-user"></i> <span class="nav-label">My Profile</span> </a>
+                    <a href="my-profile.php"><i class="fa fa-user" aria-hidden="true"></i> <span class="nav-label">My Profile</span> </a>
                 </li>
                 <li>
-                    <a href="courses.php"><i class="fa fa-bookmark"></i> <span class="nav-label">Courses</span> </a>
+                    <a href="courses.php"><i class="fa fa-bookmark" aria-hidden="true"></i> <span class="nav-label">Courses</span> </a>
                 </li>
                 <li>
-                    <a href="student.php"><i class="fa fa-exchange"></i> <span class="nav-label">Student</span> </a>
+                    <a href="student.php"><i class="fa fa-exchange" aria-hidden="true"></i> <span class="nav-label">Student</span> </a>
                 </li>
                 <li>
-                    <a href="lecturer.php"><i class="fa fa-area-chart"></i> <span class="nav-label">Lecturer</span> </a>
+                    <a href="lecturer.php"><i class="fa fa-area-chart" aria-hidden="true"></i> <span class="nav-label">Lecturer</span> </a>
+                </li>
+                <li>
+                    <a href="news.php"><i class="fa fa-newspaper-o" aria-hidden="true"></i> <span class="nav-label">News</span> </a>
                 </li>
             </ul>
 
@@ -78,16 +78,7 @@
         </div>
         <div class="wrapper wrapper-content animated fadeInRight">
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="text-center m-t-lg">
-                        <h1>
-                            Welcome in Administrator E-Learning
-                        </h1>
-                        <small>
-
-                        </small>
-                    </div>
-                </div>
+              
             </div>
         </div>
         <div class="footer">

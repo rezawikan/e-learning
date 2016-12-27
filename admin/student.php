@@ -50,19 +50,22 @@
                     </div>
                 </li>
                 <li>
-                    <a href="home.php"><i class="fa fa-th-large"></i> <span class="nav-label">Home</span></a>
+                    <a href="home.php"><i class="fa fa-th-large" aria-hidden="true"></i> <span class="nav-label">Home</span></a>
                 </li>
                 <li>
-                    <a href="my-profile.php"><i class="fa fa-user"></i> <span class="nav-label">My Profile</span> </a>
+                    <a href="my-profile.php"><i class="fa fa-user" aria-hidden="true"></i> <span class="nav-label">My Profile</span> </a>
                 </li>
                 <li>
-                    <a href="courses.php"><i class="fa fa-bookmark"></i> <span class="nav-label">Courses</span> </a>
+                    <a href="courses.php"><i class="fa fa-bookmark" aria-hidden="true"></i> <span class="nav-label">Courses</span> </a>
                 </li>
                 <li class="active">
-                    <a href="student.php"><i class="fa fa-exchange"></i> <span class="nav-label">Student</span> </a>
+                    <a href="student.php"><i class="fa fa-exchange" aria-hidden="true"></i> <span class="nav-label">Student</span> </a>
                 </li>
                 <li>
-                    <a href="lecturer.php"><i class="fa fa-area-chart"></i> <span class="nav-label">Lecturer</span> </a>
+                    <a href="lecturer.php"><i class="fa fa-area-chart" aria-hidden="true"></i> <span class="nav-label">Lecturer</span> </a>
+                </li>
+                <li>
+                    <a href="news.php"><i class="fa fa-newspaper-o" aria-hidden="true"></i> <span class="nav-label">News</span> </a>
                 </li>
 
         </div>
