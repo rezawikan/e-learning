@@ -132,58 +132,6 @@ class Authentication
 		setcookie("admin", "", time() - (86400 * 30), "/");
 	}
 
-	public function getDataUser($studentID)
-	{
-		try {
-				$user = $this->conn;
-				$user->setTable('admin');
-				$result = $user->select()->where('id','=',$studentID)->first();
-
-				echo json_encode($result);
-		} catch (PDOException $e) {
-				echo "Error ". $e->getMessage;
-		}
-	}
-
-
-	public function updateUser($email, $firstName, $lastName, $gender, $date, $id)
-	{
-		try {
-				$user = $this->conn;
-				$user->setTable('admin');
-				$result = $user->where('id','=',$id)
-				->update([
-					'email' 				=> $email,
-					'first_name'		=> $firstName,
-					'last_name'			=> $lastName,
-					'gender'				=> $gender,
-					'date_of_birth'	=> $date
-				]);
-
-				return true;
-		} catch (PDOException $e) {
-				echo "Error ". $e->getMessage;
-		}
-	}
-
-	// set a new password
-	public function updatePassword($fpassword, $id)
-	{
-		try {
-				$password = password_hash($fpassword, PASSWORD_DEFAULT);
-				$user = $this->conn;
-				$user->setTable('admin');
-				$result = $user->where('id','=',$id)->update([
-					'password' => $password
-				]);
-
-				return true;
-		} catch (PDOException $e) {
-			echo "Error". $e->getMessage();
-		}
-	}
-
-
 	//
 	// public function generateRandomString($length)
 	// {

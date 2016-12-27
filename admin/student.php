@@ -15,11 +15,17 @@
     <link href="assets/css/animate.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 
+    <!-- FormValidation CSS file -->
+    <link rel="stylesheet" href="assets/css/formValidation.min.css">
+
+    <!-- Ladda style -->
+    <link rel="stylesheet" href="assets/css/plugins/ladda/ladda-themeless.min.css">
+
     <!-- DatePicker -->
-    <link href="assets/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/plugins/datapicker/datepicker3.css">
 
     <!-- FooTable -->
-    <link href="assets/css/plugins/footable/footable.core.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/plugins/footable/footable.core.css">
 
 </head>
 
@@ -112,86 +118,26 @@
                             </div>
                         </div>
                         <div class="ibox-content">
-                            <input type="text" class="form-control input-sm m-b-xs" id="filter"
-                                   placeholder="Search">
-
+                          <div id="message"></div>
+                            <input type="text" class="form-control input-sm m-b-xs" id="filter" placeholder="Search">
                             <table class="footable table table-stripped" data-page-size="8" data-filter=#filter>
                                 <thead>
                                 <tr>
-                                  <th>First Name</th>
-                                  <th>Last Name</th>
-                                  <th>Gender</th>
+                                  <th>Email</th>
+                                  <th>Username</th>
+                                  <th data-hide="phone,tablet, desktop">First Name</th>
+                                  <th data-hide="phone,tablet, desktop">Last Name</th>
+                                  <th data-hide="phone,tablet, desktop">Gender</th>
+                                  <th data-hide="phone,tablet, desktop">Date Of Birth</th>
+                                  <th data-hide="phone,tablet, desktop">Last Update</th>
                                   <th>Action</th>
                                 </tr>
                                 </thead>
-                                <tbody>
-                                <tr class="ScoreX">
-                                    <td>Tomas</td>
-                                    <td>Sebastian</td>
-                                    <td>Man</td>
-                                    <td> <i class="fa fa-edit" aria-hidden="true"></i> | <i class="fa fa-trash" aria-hidden="true"></i></td>
-                                </tr>
-                                <tr class="ScoreC">
-                                  <td>Tomas</td>
-                                  <td>Sebastian</td>
-                                  <td>Man</td>
-                                    <td> <i class="fa fa-edit" aria-hidden="true"></i> | <i class="fa fa-trash" aria-hidden="true"></i></td>
-
-                                </tr>
-                                <tr class="ScoreA">
-                                  <td>Tomas</td>
-                                  <td>Sebastian</td>
-                                  <td>Man</td>
-                                    <td> <i class="fa fa-edit" aria-hidden="true"></i> | <i class="fa fa-trash" aria-hidden="true"></i></td>
-
-                                </tr>
-                                <tr class="ScoreA">
-                                  <td>Tomas</td>
-                                  <td>Sebastian</td>
-                                  <td>Man</td>
-                                    <td> <i class="fa fa-edit" aria-hidden="true"></i> | <i class="fa fa-trash" aria-hidden="true"></i></td>
-
-                                </tr>
-
-                                <tr class="ScoreA">
-                                  <td>Tomas</td>
-                                  <td>Sebastian</td>
-                                  <td>Man</td>
-                                    <td> <i class="fa fa-edit" aria-hidden="true"></i> | <i class="fa fa-trash" aria-hidden="true"></i></td>
-
-                                </tr>
-                                <tr class="ScoreA">
-                                  <td>Tomas</td>
-                                  <td>Sebastian</td>
-                                  <td>Man</td>
-                                    <td> <i class="fa fa-edit" aria-hidden="true"></i> | <i class="fa fa-trash" aria-hidden="true"></i></td>
-
-                                </tr>
-                                <tr class="ScoreA">
-                                  <td>Tomas</td>
-                                  <td>Sebastian</td>
-                                  <td>Man</td>
-                                    <td> <i class="fa fa-edit" aria-hidden="true"></i> | <i class="fa fa-trash" aria-hidden="true"></i></td>
-
-                                </tr>
-                                <tr class="ScoreA">
-                                  <td>Tomas</td>
-                                  <td>Sebastian</td>
-                                  <td>Man</td>
-                                  <td> <i class="fa fa-edit" aria-hidden="true"></i> | <i class="fa fa-trash" aria-hidden="true"></i></td>
-
-                                </tr>
-                                <tr class="ScoreA">
-                                  <td>Tomas</td>
-                                  <td>Sebastian</td>
-                                  <td>Man</td>
-                                  <td> <i class="fa fa-edit" aria-hidden="true"></i> | <i class="fa fa-trash" aria-hidden="true"></i></td>
-
-                                </tr>
+                                <tbody id="data-students">
                                 </tbody>
                                 <tfoot>
                                 <tr>
-                                  <td colspan="5">
+                                  <td colspan="8">
                                       <ul class="pagination pull-right"></ul>
                                   </td>
                                 </tr>
@@ -216,46 +162,16 @@
                       <div class="ibox-content">
                           <div class="row">
                               <div class="col-sm-12">
-                                  <form role="form">
-                                      <div class="form-group">
-                                        <label>Email</label>
-                                        <input type="email" placeholder="Enter email" name="email" class="form-control">
-                                      </div>
-                                      <div class="form-group">
-                                        <label>Username</label>
-                                        <input type="username" placeholder="Username" name="username" class="form-control">
-                                      </div>
-                                      <div class="form-group">
-                                        <label>Password</label>
-                                        <input type="password" placeholder="Password" name="password" class="form-control">
-                                      </div>
-                                      <div class="form-group">
-                                        <label>First Name</label>
-                                        <input type="text" placeholder="First Name" class="form-control">
-                                      </div>
-                                      <div class="form-group">
-                                        <label>Last Name</label>
-                                        <input type="text" placeholder="Last Name" class="form-control">
-                                      </div>
-                                      <div class="form-group">
-                                        <label>Gender</label>
-                                        <select placeholder="Enter email" class="form-control">
-                                          <option>Select</option>
-                                          <option value="men">Man</option>
-                                          <option value="women">Women</option>
-                                        </select>
-                                      </div>
-                                      <div class="form-group" id="data_2">
-                                          <label>Day of Birth</label>
-                                          <div class="input-group date">
-                                            <span class="input-group-addon">
-                                              <i class="fa fa-calendar"></i>
-                                            </span>
-                                            <input type="text" class="form-control">
-                                          </div>
-                                      </div>
+                                <div id="message-add">
+
+                                </div>
+                                    <form role="form" id="form-add-student" method="POST">
+
+                                    <!-- Form Student -->
+                                    <?php include 'templates/part/form-student.php'; ?>
+
                                       <div>
-                                          <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>Update</strong></button>
+                                          <button class="btn btn-sm btn-primary pull-right m-t-n-xs ladda-button" type="submit" data-style="expand-right" name="btn-add-student">Submit</button>
                                       </div>
                                   </form>
                               </div>
@@ -265,6 +181,56 @@
               </div>
           </div>
         </div>
+
+        <!-- Start Modals Edit Student -->
+        <div id="modal-form-update" class="modal fade" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h3 class="m-t-none m-b">Edit Product</h3>
+                                <p>Make sure your product</p>
+
+                                <form role="form" id="form-data-update" method="POST">
+
+                                  <!-- Form Student -->
+                                  <?php include 'templates/part/form-student.php'; ?>
+
+                                    <input type="hidden" name="id" class="form-control">
+                                    <div>
+                                      <button class="btn btn-sm btn-primary ladda-button padding-btn" data-style="expand-right" type="submit" name="btn-update-student">OK</button>
+                                      <button id="cancel-btn-update" class="btn btn-sm btn-primary padding-btn" type="submit">Cancel</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Modals Edit Student -->
+
+        <!-- Starts Modals Confirmation Delete -->
+              <div id="modal-form-delete" class="modal fade" aria-hidden="true">
+                  <div class="modal-dialog">
+                      <div class="modal-content">
+                          <div class="modal-body">
+                              <div class="row">
+                                  <div class="col-sm-12">
+                                      <h3 class="m-t-none m-b">Delete Confirmation</h3>
+                                      <div id="confirm"></div>
+                                      <div>
+                                          <button id="sure" type="button" name="btn-delete" class="btn btn-primary padding-btn ladda-button" type="submit" data-style="expand-right">Ok</button>
+                                          <button id="cancel" type="button" class="btn btn-primary padding-btn">Cancel</button>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- End Modals Confirmation Delete-->
 
         <div class="footer">
             <div class="pull-right">
@@ -288,25 +254,20 @@
 <!-- Data picker -->
 <script src="assets/js/plugins/datapicker/bootstrap-datepicker.js"></script>
 
+<!-- FormValidation plugin and the class supports validating Bootstrap form -->
+<script src="assets/js/formValidation.min.js"></script>
+<script src="assets/js/framework/bootstrap.min.js"></script>
+
+<!-- Ladda -->
+<script src="assets/js/plugins/ladda/spin.min.js"></script>
+<script src="assets/js/plugins/ladda/ladda.min.js"></script>
+<script src="assets/js/plugins/ladda/ladda.jquery.min.js"></script>
+
 <!-- FooTable -->
 <script src="assets/js/plugins/footable/footable.all.min.js"></script>
 
-
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('.footable').footable();
-      $('.footable2').footable();
-
-    $('#data_2 .input-group.date').datepicker({
-        startView: 1,
-        todayBtn: "linked",
-        keyboardNavigation: false,
-        forceParse: false,
-        autoclose: true,
-        format: "dd/mm/yyyy"
-      });
-  });
-</script>
+<!-- Student -->
+<script src="assets/js/page/student.js"></script>
 
 </body>
 

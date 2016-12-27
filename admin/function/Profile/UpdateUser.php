@@ -2,10 +2,10 @@
 session_start();
 require_once '../../vendor/autoload.php';
 
-use Elearn\Auth\Authentication as Auth;
+use Elearn\Profile\Profile;
 use Elearn\Auth\Redirect;
 
-$admin 	= new Auth;
+$admin 	= new Profile;
 $home_url = '../../../index.php'; // redirect link
 
 

@@ -31,7 +31,7 @@ function getCookie(cname) {
       var dataID = getCookie('admin');
 
       $.ajax({
-          url: 'function/Auth/ViewDataUser.php',
+          url: 'function/Profile/ViewDataUser.php',
           type: 'POST',
           data: {
               adminID: dataID
@@ -109,14 +109,14 @@ function getCookie(cname) {
         l.start();
         // Use Ajax to submit form data
         $.ajax( {
-            url: 'function/Auth/updateUser.php',
+            url: 'function/Profile/updateUser.php',
             type: 'POST',
             data: $form.serialize(),
             success: function(result) {
               console.log(result);
                 var resultObj = JSON.parse(result);
                 console.log(resultObj); // log processing
-                if(resultObj.process == 'success') {
+                if(resultObj.success) {
                     $('#message').html("<div class='alert alert-success alert-dismissable'><button aria-hidden='true' data-dismiss='alert' class='close' type='button'>×</button><strong>Success!</strong></div>");
 
                 }
@@ -171,7 +171,7 @@ function getCookie(cname) {
             a.start();
 
             $.ajax({
-                url: 'function/auth/UpdatePassword.php',
+                url: 'function/Profile/UpdatePassword.php',
                 type: 'POST',
                 data: $form.serialize(),
                 success: function(result) {
