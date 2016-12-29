@@ -1,0 +1,11 @@
+{
+    "name": "Mochammad Rezza/lecturer",
+    "description": "Lecturer Page",
+    "type": "project E-Learning",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {"Elearn\\": "classes/"}
+    }
+}

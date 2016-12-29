@@ -63,7 +63,7 @@ if ($log->is_logged_in()) {
                     <input type="hidden" class="form-control" name="token" value="<?php echo Token::generateToken(); ?>" required>
                 </div>
                 <button type="submit" class="btn btn-primary block full-width m-b ladda-button" name="btn-login">Login</button>
-<!-- 
+<!--
                 <a href="forgot_password.php"><small>Forgot password?</small></a>
                 <p class="text-muted text-center"><small>Do not have an account?</small></p>
                 <a class="btn btn-sm btn-white btn-block" href="signup.php">Create an account</a> -->
