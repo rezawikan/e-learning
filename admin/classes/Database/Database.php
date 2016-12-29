@@ -9,7 +9,7 @@ class Database
 
   private $server     = 'localhost',
           $username   = 'root',
-          $password   = '',
+          $password   = 'root',
           $db_name    = 'e-learning';
 
   private $_conn;

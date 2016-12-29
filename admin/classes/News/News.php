@@ -91,5 +91,18 @@ class News
     }
   }
 
+  public function CountDataNews()
+  {
+    try {
+        $user = $this->conn;
+        $user->setTable('news');
+        $result = $user->select()->all();
+
+        echo count($result);
+    } catch (PDOException $e) {
+      echo "Error : ".$e->getMessage();
+    }
+  }
+
 }
  ?>

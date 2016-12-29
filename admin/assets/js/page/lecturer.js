@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  $('.footable').footable();
+
   $('#form-add-lecturer #datePicker').datepicker({
       format: "mm/dd/yyyy"
   })

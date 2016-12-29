@@ -100,5 +100,20 @@ class Student
     }
   }
 
+
+  public function CountDataStudent()
+  {
+    try {
+        $user = $this->conn;
+        $user->setTable('students');
+        $result = $user->select()->all();
+
+        echo count($result);
+    } catch (PDOException $e) {
+      echo "Error : ".$e->getMessage();
+    }
+  }
+
+
 }
  ?>

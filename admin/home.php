@@ -15,6 +15,9 @@
     <link href="assets/css/animate.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 
+    <!-- FooTable -->
+    <link href="assets/css/plugins/footable/footable.core.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -77,10 +80,123 @@
             </nav>
         </div>
         <div class="wrapper wrapper-content animated fadeInRight">
-            <div class="row">
-              
+          <div class="row">
+            <div class="col-lg-3">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <span class="label label-success pull-right">All</span>
+                        <h5>Courses</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <h1 class="no-margins total-courses"></h1>
+                        <small>Total courses</small>
+                    </div>
+                </div>
             </div>
+
+            <div class="col-lg-3">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <span class="label label-success pull-right">All</span>
+                        <h5>Students</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <h1 class="no-margins total-students"></h1>
+                        <small>Total students</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <span class="label label-success pull-right">All</span>
+                        <h5>Lecturers</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <h1 class="no-margins total-lecturers"></h1>
+                        <small>Total lecturers</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <span class="label label-success pull-right">All</span>
+                        <h5>News</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <h1 class="no-margins total-news"></h1>
+                        <small>Total news</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="ibox float-e-margins">
+                  <div class="ibox-title">
+                      <h5>News</h5>
+                      <div class="ibox-tools">
+                          <a class="collapse-link">
+                              <i class="fa fa-chevron-up"></i>
+                          </a>
+                          <a class="close-link">
+                              <i class="fa fa-times"></i>
+                          </a>
+                      </div>
+                  </div>
+                  <div class="ibox-content">
+                    <!-- Table -->
+                    <div class="table-responsive">
+                        <table class="footable table table-stripped shoping-cart-table" data-page-size="6" data-filter=#filter>
+                            <tbody id="data-news">
+                            <!-- <tr class="border-bottom">
+                                <td class="desc">
+                                    <h3>
+                                    <a href="#" class="text-navy">
+                                        Title
+                                    </a>
+                                    </h3>
+                                    <p class="small">
+                                        Description
+                                    </p>
+                                </td>
+                                <td>
+                                  <a href='#modal-form-update' data-toggle='modal' id='"+el.id+"' class='edit_course'><i class='fa fa-edit' aria-hidden='true'></i></a> |
+                                  <a href='#modal-form-delete' data-toggle='modal' id='"+el.id+"' class='delete_course'><i class='fa fa-trash' aria-hidden='true'></i></a>
+                                </td>
+                            </tr>
+                            <tr class="border-bottom">
+                                <td class="desc">
+                                    <h3>
+                                    <a href="#" class="text-navy">
+                                        Title
+                                    </a>
+                                    </h3>
+                                    <p class="small">
+                                        Description
+                                    </p>
+                                </td>
+                                <td>
+                                  <a href='#modal-form-update' data-toggle='modal' id='"+el.id+"' class='edit_course'><i class='fa fa-edit' aria-hidden='true'></i></a> |
+                                  <a href='#modal-form-delete' data-toggle='modal' id='"+el.id+"' class='delete_course'><i class='fa fa-trash' aria-hidden='true'></i></a>
+                                </td>
+                            </tr> -->
+                            </tbody>
+                            <tfoot>
+                            <tr>
+                              <td colspan="2">
+                                  <ul class="pagination pull-right"></ul>
+                              </td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
         </div>
+
         <div class="footer">
             <div class="pull-right">
                 <strong>Copyright</strong> e-learning Co., Ltd. &copy; 2016
@@ -99,6 +215,11 @@
 <!-- Custom and plugin javascript -->
 <script src="assets/js/theme.js"></script>
 <script src="assets/js/plugins/pace/pace.min.js"></script>
+
+<!-- FooTable -->
+<script src="assets/js/plugins/footable/footable.all.min.js"></script>
+
+<script src="assets/js/page/home.js"></script>
 
 
 </body>

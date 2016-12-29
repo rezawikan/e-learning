@@ -88,8 +88,21 @@ class Course
         $user = $this->conn;
         $user->setTable('courses');
         $result = $user->where('id','=',$id)->delete();
-        
+
         return true;
+    } catch (PDOException $e) {
+      echo "Error : ".$e->getMessage();
+    }
+  }
+
+  public function CountDataCourse()
+  {
+    try {
+        $user = $this->conn;
+        $user->setTable('courses');
+        $result = $user->select()->all();
+
+        echo count($result);
     } catch (PDOException $e) {
       echo "Error : ".$e->getMessage();
     }

@@ -267,14 +267,6 @@
 <script src="assets/js/page/courses.js"></script>
 
 
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('.footable').footable();
-    // $('.footable2').footable();
-
-  });
-</script>
-
 </body>
 
 </html>

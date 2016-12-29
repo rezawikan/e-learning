@@ -100,5 +100,18 @@ class Lecturer
     }
   }
 
+  public function CountDataLecturer()
+  {
+    try {
+        $user = $this->conn;
+        $user->setTable('tutors');
+        $result = $user->select()->all();
+
+        echo count($result);
+    } catch (PDOException $e) {
+      echo "Error : ".$e->getMessage();
+    }
+  }
+
 }
  ?>
