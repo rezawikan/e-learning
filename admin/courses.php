@@ -268,9 +268,6 @@
 <!-- FooTable -->
 <script src="assets/js/plugins/footable/footable.all.min.js"></script>
 
-<!-- Clock picker -->
-<script src="assets/js/plugins/clockpicker/clockpicker.js"></script>
-
 <!-- Courses -->
 <script src="assets/js/page/courses.js"></script>
 

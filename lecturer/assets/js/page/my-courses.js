@@ -3,9 +3,6 @@ $(document).ready(function() {
 
     $('.footable').footable();
 
-
-
-
     loadDataCourses();
     function loadDataCourses()
     {
@@ -22,7 +19,7 @@ $(document).ready(function() {
 
             $.each(resultObj, function(index, el) {
               var rows    = $('<tr>');
-              rows.html("<td>"+el.subject_id+"</td><td>"+el.name+"</td><td>"+el.description+"</td><td><a href='#modal-form-update' data-toggle='modal' id='"+el.id+"' class='edit_course'><i class='fa fa-edit' aria-hidden='true'></i></a> | <a href='#modal-form-delete' data-toggle='modal' id='"+el.id+"' class='delete_course'><i class='fa fa-trash' aria-hidden='true'></i></a></td>");
+              rows.html("<td>"+el.subject_id+"</td><td>"+el.name+"</td><td>"+el.description+"</td><td>"+el.day+"</td><td>"+el.time+"</td>");
               handler.append(rows).trigger('footable_redraw');
             });
 

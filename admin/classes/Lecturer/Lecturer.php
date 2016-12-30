@@ -45,7 +45,7 @@ class Lecturer
     try {
         $user = $this->conn;
         $user->setTable('tutors');
-        $result = $user->select()->orderBy('create_at','DESC')->all();
+        $result = $user->select()->orderBy('update_at','DESC')->all();
 
         echo json_encode($result);
     } catch (PDOException $e) {

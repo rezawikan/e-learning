@@ -1,3 +1,4 @@
+<?php require_once 'templates/data.php'; ?>
 <!DOCTYPE html>
 <html>
 
@@ -8,17 +9,17 @@
 
     <title>e-Learning | Lecturer</title>
 
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet">
 
-    <link href="../assets/css/animate.css" rel="stylesheet">
-    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
 
     <!-- DatePicker -->
-    <link href="../assets/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <link href="assets/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
 
     <!-- FooTable -->
-    <link href="../assets/css/plugins/footable/footable.core.css" rel="stylesheet">
+    <link href="assets/css/plugins/footable/footable.core.css" rel="stylesheet">
 
 </head>
 
@@ -31,12 +32,9 @@
             <ul class="nav metismenu" id="side-menu">
                 <li class="nav-header">
                     <div class="dropdown profile-element">
-                            <span>
-                                <img alt="image" class="img-circle" src="../assets/img/profile_small.jpg" />
-                            </span>
                             <a href="#">
                                 <span class="clear">
-                                    <span class="block m-t-xs"> <strong class="font-bold">John Low</strong></span>
+                                    <span class="block m-t-xs"> <strong class="font-bold"><?php echo $user->fullName; ?></strong></span>
                                     <span class="text-muted text-xs block">Student</span>
                                 </span>
                             </a>
@@ -77,7 +75,7 @@
                 </div>
                 <ul class="nav navbar-top-links navbar-right">
                     <li>
-                        <a href="#">
+                        <a href="logout.php">
                             <i class="fa fa-sign-out"></i> Log out
                         </a>
                     </li>
@@ -121,7 +119,7 @@
                             <input type="text" class="form-control input-sm m-b-xs" id="filter"
                                    placeholder="Search in table">
 
-                            <table class="footable table table-stripped" data-page-size="8" data-filter=#filter>
+                            <!-- <table class="footable table table-stripped" data-page-size="8" data-filter=#filter>
                                 <thead>
                                 <tr>
                                   <th>Subject ID</th>
@@ -202,7 +200,7 @@
                                   </td>
                                 </tr>
                                 </tfoot>
-                            </table>
+                            </table> -->
                         </div>
                     </div>
                 </div>
@@ -225,24 +223,20 @@
                                     <form role="form">
                                         <div class="form-group">
                                           <label>Subject ID</label>
-                                          <select name="course-code" class="form-control">
-                                            <option value="">Select</option>
-                                            <option value="">BIT106</option>
-                                            <option value="">BIT109</option>
-                                            <option value="">BIT101</option>
+                                          <select name="subjectID" class="form-control chosen-select" data-placeholder="Choose a subject id" tabindex="2">
                                           </select>
                                         </div>
                                         <div class="form-group">
                                           <label>Number</label>
                                           <select name="course-code" class="form-control">
                                             <option value="">Select</option>
-                                            <option value="">1</option>
-                                            <option value="">2</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
                                           </select>
                                         </div>
                                         <div class="form-group">
                                           <label>Assignment File</label>
-                                          <input type="file" name="answer-a" class="form-control">
+                                          <input type="file" name="assignment_file" class="form-control">
                                         </div>
                                         <div>
                                             <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>Submit</strong></button>
@@ -266,37 +260,23 @@
 </div>
 
 <!-- Mainly scripts -->
-<script src="../assets/js/jquery-2.1.1.js"></script>
-<script src="../assets/js/bootstrap.min.js"></script>
-<script src="../assets/js/plugins/metisMenu/jquery.metisMenu.js"></script>
-<script src="../assets/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="assets/js/jquery-2.2.3.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="assets/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
 <!-- Custom and plugin javascript -->
-<script src="../assets/js/theme.js"></script>
-<script src="../assets/js/plugins/pace/pace.min.js"></script>
+<script src="assets/js/theme.js"></script>
+<script src="assets/js/plugins/pace/pace.min.js"></script>
 
 <!-- Data picker -->
-<script src="../assets/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<script src="assets/js/plugins/datapicker/bootstrap-datepicker.js"></script>
 
 <!-- FooTable -->
-<script src="../assets/js/plugins/footable/footable.all.min.js"></script>
+<script src="assets/js/plugins/footable/footable.all.min.js"></script>
 
-
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('.footable').footable();
-      $('.footable2').footable();
-
-    $('#data_2 .input-group.date').datepicker({
-        startView: 1,
-        todayBtn: "linked",
-        keyboardNavigation: false,
-        forceParse: false,
-        autoclose: true,
-        format: "dd/mm/yyyy"
-      });
-  });
-</script>
+<!-- Assignment -->
+<script src="assets/js/page/assignment.js"></script>
 
 </body>
 

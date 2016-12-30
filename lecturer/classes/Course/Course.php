@@ -16,14 +16,12 @@ class Course
 	}
 
 
-
-
   public function ViewDataCourse($tutors_id)
   {
     try {
         $user = $this->conn;
         $user->setTable('courses');
-        $result = $user->select()->where('tutors_id','=',$tutors_id)->all();
+        $result = $user->select()->where('tutors_id','=',$tutors_id)->orderBy('update_at','DESC')->all();
 
         echo json_encode($result);
     } catch (PDOException $e) {
