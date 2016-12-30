@@ -12,13 +12,17 @@ if (isset($_COOKIE['admin'],
           $_POST['name'],
           $_POST['subjectID'],
           $_POST['description'],
-          $_POST['tutorID']
+          $_POST['tutorID'],
+          $_POST['day'],
+          $_POST['time']
 )) {
     $name         = $_POST['name'];
     $subjectID    = $_POST['subjectID'];
     $description  = $_POST['description'];
     $tutorID      = $_POST['tutorID'];
-    $response     = $admin->createDataCourse($name, $subjectID, $description, $tutorID);
+    $day          = $_POST['day'];
+    $time         = $_POST['time'];
+    $response     = $admin->createDataCourse($name, $subjectID, $description, $tutorID, $day, $time);
 
     if ($response == true){
         $result['success'] = 'success';

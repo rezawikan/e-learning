@@ -39,7 +39,7 @@ class News
     try {
         $user = $this->conn;
         $user->setTable('news');
-        $result = $user->select()->all();
+        $result = $user->select()->orderBy('create_at','DESC')->all();
 
         echo json_encode($result);
     } catch (PDOException $e) {

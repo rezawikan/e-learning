@@ -11,7 +11,7 @@ $result = array();
 
 if (isset($_POST['password'])){
   $password 	  = $_POST['password'];
-  $id 		    = $_COOKIE['admin'];
+  $id 		    = $_COOKIE['tutors'];
 
   if ($admin->updatePassword($password, $id))	{
       $result['valid'] = 'success';

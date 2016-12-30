@@ -1,3 +1,4 @@
+<?php require_once 'templates/data.php'; ?>
 <!DOCTYPE html>
 <html>
 
@@ -8,17 +9,17 @@
 
     <title>e-Learning | My Courses</title>
 
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet">
 
-    <link href="../assets/css/animate.css" rel="stylesheet">
-    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
 
     <!-- DatePicker -->
-    <link href="../assets/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <link href="assets/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
 
     <!-- FooTable -->
-    <link href="../assets/css/plugins/footable/footable.core.css" rel="stylesheet">
+    <link href="assets/css/plugins/footable/footable.core.css" rel="stylesheet">
 
 
 
@@ -33,12 +34,9 @@
             <ul class="nav metismenu" id="side-menu">
                 <li class="nav-header">
                     <div class="dropdown profile-element">
-                            <span>
-                                <img alt="image" class="img-circle" src="../assets/img/profile_small.jpg" />
-                            </span>
                             <a href="#">
                                 <span class="clear">
-                                    <span class="block m-t-xs"> <strong class="font-bold">John Low</strong></span>
+                                    <span class="block m-t-xs"> <strong class="font-bold"><?php echo $user->fullName; ?></strong></span>
                                     <span class="text-muted text-xs block">Lecturer</span>
                                 </span>
                             </a>
@@ -106,7 +104,7 @@
 
         <div class="wrapper wrapper-content animated fadeInRight">
           <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-12">
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
                             <h5>My Courses</h5>
@@ -121,8 +119,7 @@
                             </div>
                         </div>
                         <div class="ibox-content">
-                            <input type="text" class="form-control input-sm m-b-xs" id="filter"
-                                   placeholder="Search">
+                            <input type="text" class="form-control input-sm m-b-xs" id="filter" placeholder="Search">
 
                             <table class="footable table table-stripped" data-page-size="8" data-filter=#filter>
                                 <thead>
@@ -133,68 +130,7 @@
 
                                 </tr>
                                 </thead>
-                                <tbody>
-                                <tr class="ScoreX">
-                                    <td>BIT308</td>
-                                    <td>Technology Information</td>
-                                    <td>Technologi</td>
-
-                                </tr>
-                                <tr class="ScoreC">
-                                  <td>BIT308</td>
-                                  <td>Technology Information</td>
-                                  <td>Technologi</td>
-
-                                </tr>
-                                <tr class="ScoreA">
-                                  <td>BIT308</td>
-                                  <td>Technology Information</td>
-                                  <td>Technologi</td>
-
-
-
-                                </tr>
-                                <tr class="ScoreA">
-                                  <td>BIT308</td>
-                                  <td>Technology Information</td>
-                                  <td>Technologi</td>
-
-
-
-                                </tr>
-
-                                <tr class="ScoreA">
-                                  <td>BIT308</td>
-                                  <td>Technology Information</td>
-                                  <td>Technologi</td>
-
-
-
-                                </tr>
-                                <tr class="ScoreA">
-                                  <td>BIT308</td>
-                                  <td>Technology Information</td>
-                                  <td>Technologi</td>
-
-
-
-                                </tr>
-                                <tr class="ScoreA">
-                                  <td>BIT308</td>
-                                  <td>Technology Information</td>
-                                  <td>Technologi</td>
-
-
-
-                                </tr>
-                                <tr class="ScoreA">
-                                  <td>BIT308</td>
-                                  <td>Technology Information</td>
-                                  <td>Technologi</td>
-
-
-
-                                </tr>
+                                <tbody id="data-courses">
 
                                 </tbody>
                                 <tfoot>
@@ -221,37 +157,21 @@
 </div>
 
 <!-- Mainly scripts -->
-<script src="../assets/js/jquery-2.1.1.js"></script>
-<script src="../assets/js/bootstrap.min.js"></script>
-<script src="../assets/js/plugins/metisMenu/jquery.metisMenu.js"></script>
-<script src="../assets/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="assets/js/jquery-2.2.3.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="assets/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
 <!-- Custom and plugin javascript -->
-<script src="../assets/js/theme.js"></script>
-<script src="../assets/js/plugins/pace/pace.min.js"></script>
-
-<!-- Data picker -->
-<script src="../assets/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<script src="assets/js/theme.js"></script>
+<script src="assets/js/plugins/pace/pace.min.js"></script>
 
 <!-- FooTable -->
-<script src="../assets/js/plugins/footable/footable.all.min.js"></script>
+<script src="assets/js/plugins/footable/footable.all.min.js"></script>
 
+<!-- My Courses -->
+<script src="assets/js/page/my-courses.js"></script>
 
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('.footable').footable();
-    $('.footable2').footable();
-
-    $('#data_2 .input-group.date').datepicker({
-        startView: 1,
-        todayBtn: "linked",
-        keyboardNavigation: false,
-        forceParse: false,
-        autoclose: true,
-        format: "dd/mm/yyyy"
-      });
-  });
-</script>
 
 </body>
 

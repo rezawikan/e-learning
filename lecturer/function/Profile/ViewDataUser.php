@@ -6,10 +6,10 @@ use Elearn\Profile\Profile;
 use Elearn\Auth\Redirect;
 
 
-$admin = new Profile;
-if (isset($_POST['adminID'])) {
-    $adminID = $_POST['adminID'];
-    $admin->getDataUser($adminID);
+$lecturer = new Profile;
+if (isset($_POST['tutors'])) {
+    $lecturerID = $_POST['tutors'];
+    $lecturer->getDataUser($lecturerID);
 } else {
     Redirect::to('index.php'); // for direct acces to this file
 }

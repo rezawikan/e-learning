@@ -20,7 +20,9 @@ if (isset($_COOKIE['admin'],
     $subjectID    = $_POST['subjectID'];
     $description  = $_POST['description'];
     $tutorID      = $_POST['tutorID'];
-    $response     = $admin->UpdateDataCourse($name, $subjectID, $description, $tutorID, $id);
+    $day          = $_POST['day'];
+    $time         = $_POST['time'];
+    $response     = $admin->UpdateDataCourse($name, $subjectID, $description, $tutorID, $day, $time, $id);
 
     if ($response == true){
         $result['success'] = 'success';

@@ -23,7 +23,7 @@ if (isset($_POST['email'],
 		$lastName   = $_POST['lastName'];
 		$gender			= $_POST['gender'];
 		$date				= $_POST['date'];
-    $id         = $_COOKIE['admin'];
+    $id         = $_COOKIE['tutors'];
 
 
 		if ($admin->updateUser($email, $firstName, $lastName, $gender, $date, $id)) {

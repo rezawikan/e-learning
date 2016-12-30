@@ -24,6 +24,9 @@
     <!-- FooTable -->
     <link href="assets/css/plugins/footable/footable.core.css" rel="stylesheet">
 
+    <!-- Clock Picker -->
+    <link href="assets/css/plugins/clockpicker/clockpicker.css" rel="stylesheet">
+
 
 
 </head>
@@ -132,6 +135,8 @@
                                   <th>Subject ID</th>
                                   <th>Name</th>
                                   <th data-hide="phone,tablet">Description</th>
+                                  <th data-hide="phone,tablet">Day</th>
+                                  <th data-hide="phone,tablet">Time</th>
                                   <th colspan="2">Action</th>
                                 </tr>
                                 </thead>
@@ -262,6 +267,9 @@
 
 <!-- FooTable -->
 <script src="assets/js/plugins/footable/footable.all.min.js"></script>
+
+<!-- Clock picker -->
+<script src="assets/js/plugins/clockpicker/clockpicker.js"></script>
 
 <!-- Courses -->
 <script src="assets/js/page/courses.js"></script>

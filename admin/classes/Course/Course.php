@@ -16,7 +16,7 @@ class Course
 	}
 
 
-  public function createDataCourse($name, $subjectID, $description, $tutorID)
+  public function createDataCourse($name, $subjectID, $description, $tutorID, $day, $time)
   {
     try {
         $user = $this->conn;
@@ -26,6 +26,8 @@ class Course
           'subject_id'  => $subjectID,
           'description' => $description,
           'tutors_id'   => $tutorID,
+          'day'         => $day,
+          'time'        => $time,
           'create_at'   => date_format(new DateTime(), 'Y-m-d H:i:s')
         ]);
 
@@ -41,7 +43,7 @@ class Course
     try {
         $user = $this->conn;
         $user->setTable('courses');
-        $result = $user->select()->all();
+        $result = $user->select()->orderBy('create_at','DESC')->all();
 
         echo json_encode($result);
     } catch (PDOException $e) {
@@ -63,7 +65,7 @@ class Course
   }
 
 
-  public function UpdateDataCourse($name, $subjectID, $description, $tutorID, $id)
+  public function UpdateDataCourse($name, $subjectID, $description, $tutorID, $day, $time, $id)
   {
     try {
         $user = $this->conn;
@@ -72,7 +74,9 @@ class Course
           'name'        => $name,
           'subject_id'  => $subjectID,
           'description' => $description,
-          'tutors_id'   => $tutorID
+          'tutors_id'   => $tutorID,
+          'day'         => $day,
+          'time'        => $time
         ]);
 
         return true;

@@ -1,3 +1,4 @@
+<?php include 'templates/data.php'; ?>
 <!DOCTYPE html>
 <html>
 
@@ -8,11 +9,11 @@
 
     <title>e-Learning | Home</title>
 
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet">
 
-    <link href="../assets/css/animate.css" rel="stylesheet">
-    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
 
 </head>
 
@@ -25,12 +26,10 @@
             <ul class="nav metismenu" id="side-menu">
                 <li class="nav-header">
                     <div class="dropdown profile-element">
-                            <span>
-                                <img alt="image" class="img-circle" src="../assets/img/profile_small.jpg" />
-                            </span>
+
                             <a href="#">
                                 <span class="clear">
-                                    <span class="block m-t-xs"> <strong class="font-bold">John Low</strong></span>
+                                    <span class="block m-t-xs"> <strong class="font-bold"><?php echo $user->fullName; ?></strong></span>
                                     <span class="text-muted text-xs block">Lecturer</span>
                                 </span>
                             </a>
@@ -71,7 +70,7 @@
                 </div>
                 <ul class="nav navbar-top-links navbar-right">
                     <li>
-                        <a href="#">
+                        <a href="logout.php">
                             <i class="fa fa-sign-out"></i> Log out
                         </a>
                     </li>
@@ -103,14 +102,14 @@
 </div>
 
 <!-- Mainly scripts -->
-<script src="../assets/js/jquery-2.1.1.js"></script>
-<script src="../assets/js/bootstrap.min.js"></script>
-<script src="../assets/js/plugins/metisMenu/jquery.metisMenu.js"></script>
-<script src="../assets/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="assets/js/jquery-2.2.3.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="assets/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
 <!-- Custom and plugin javascript -->
-<script src="../assets/js/theme.js"></script>
-<script src="../assets/js/plugins/pace/pace.min.js"></script>
+<script src="assets/js/theme.js"></script>
+<script src="assets/js/plugins/pace/pace.min.js"></script>
 
 
 </body>

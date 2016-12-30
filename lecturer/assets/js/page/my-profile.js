@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  
+
   //
   $('#datePicker').datepicker({
       format: "mm/dd/yyyy"
@@ -30,13 +30,14 @@ function getCookie(cname) {
     loadDataUser();
     function loadDataUser(){
 
-      var dataID = getCookie('admin');
+      var dataID = getCookie('tutors');
+      console.log(dataID);
 
       $.ajax({
           url: 'function/Profile/ViewDataUser.php',
           type: 'POST',
           data: {
-              adminID: dataID
+              tutors: dataID
           },
           success: function(result) {
             console.log(result);

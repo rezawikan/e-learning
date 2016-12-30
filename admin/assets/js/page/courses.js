@@ -3,6 +3,7 @@ $(document).ready(function() {
 
     $('.footable').footable();
 
+
     // get data cookie
 function getCookie(cname) {
     var name = cname + "=";
@@ -30,7 +31,7 @@ function getCookie(cname) {
             success: function(response) {
               console.log(response);
               $(id).html("");
-
+              $(id).html("<option value=''>Select</option>");
                 $.each(response, function(key, val) {
                   console.log(val.id);
                     tutor = '<option value="' + val.id+ '" >' + val.first_name +" "+ val.last_name + '</option>';
@@ -57,7 +58,7 @@ function getCookie(cname) {
 
             $.each(resultObj, function(index, el) {
               var rows    = $('<tr>');
-              rows.html("<td>"+el.subject_id+"</td><td>"+el.name+"</td><td>"+el.description+"</td><td><a href='#modal-form-update' data-toggle='modal' id='"+el.id+"' class='edit_course'><i class='fa fa-edit' aria-hidden='true'></i></a> | <a href='#modal-form-delete' data-toggle='modal' id='"+el.id+"' class='delete_course'><i class='fa fa-trash' aria-hidden='true'></i></a></td>");
+              rows.html("<td>"+el.subject_id+"</td><td>"+el.name+"</td><td>"+el.description+"</td><td>"+el.day+"</td><td>"+el.time+"</td><td><a href='#modal-form-update' data-toggle='modal' id='"+el.id+"' class='edit_course'><i class='fa fa-edit' aria-hidden='true'></i></a> | <a href='#modal-form-delete' data-toggle='modal' id='"+el.id+"' class='delete_course'><i class='fa fa-trash' aria-hidden='true'></i></a></td>");
               handler.append(rows).trigger('footable_redraw');
             });
 
@@ -87,6 +88,8 @@ function getCookie(cname) {
                 $('#form-data-update input[name=name]').val(resultObj.name);
                 $('#form-data-update input[name=description]').val(resultObj.description);
                 $('#form-data-update select[name=tutorID]').val(resultObj.tutors_id);
+                $('#form-data-update select[name=day]').val(resultObj.day);
+                $('#form-data-update input[name=time]').val(resultObj.time);
             }
         })
     });
@@ -122,6 +125,20 @@ function getCookie(cname) {
                 validators: {
                     notEmpty: {
                         message: 'The tutor Name is required'
+                    }
+                } // end validators
+            }, // end lastName
+            day: {
+                validators: {
+                    notEmpty: {
+                        message: 'The Day is required'
+                    }
+                } // end validators
+            }, // end lastName
+            time: {
+                validators: {
+                    notEmpty: {
+                        message: 'The Time is required'
                     }
                 } // end validators
             } // end lastName
@@ -202,6 +219,20 @@ function getCookie(cname) {
                 validators: {
                     notEmpty: {
                         message: 'The tutor Name is required'
+                    }
+                } // end validators
+            }, // end lastName
+            day: {
+                validators: {
+                    notEmpty: {
+                        message: 'The Day is required'
+                    }
+                } // end validators
+            }, // end lastName
+            time: {
+                validators: {
+                    notEmpty: {
+                        message: 'The Time is required'
                     }
                 } // end validators
             } // end lastName

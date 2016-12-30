@@ -14,11 +14,11 @@ if (!$log->is_logged_in()) {
     Redirect::to('index.php');
 }
 
-$admin  = Database::getInstance();
-$id       = $_COOKIE['admin'];
+$lecturer  = Database::getInstance();
+$id       = $_COOKIE['tutors'];
 
 
 // get data users
-$admin->setTable('admin');
-$user = $admin->select()->where('id','=',$id)->first();
+$lecturer->setTable('tutors');
+$user = $lecturer->select()->where('id','=',$id)->first();
 $user->fullName = $user->first_name . ' ' .$user->last_name;

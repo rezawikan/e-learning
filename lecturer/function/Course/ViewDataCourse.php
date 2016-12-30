@@ -8,8 +8,9 @@ use Elearn\Auth\Redirect;
 
 $admin = new Course;
 
-if (isset($_COOKIE['admin'])) {
-    $response  = $admin->ViewDataCourse();
+if (isset($_COOKIE['tutors'])) {
+    $id       = $_COOKIE['tutors'];
+    $response = $admin->ViewDataCourse($id);
 } else {
     Redirect::to('index.php'); // for direct acces to this file
 }

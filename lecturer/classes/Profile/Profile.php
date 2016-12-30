@@ -32,7 +32,7 @@ class Profile
 	{
 		try {
 				$user = $this->conn;
-				$user->setTable('admin');
+				$user->setTable('tutors');
 				$result = $user->select()->where('id','=',$id)->first();
 
 				echo json_encode($result);
@@ -45,7 +45,7 @@ class Profile
 	{
 		try {
 				$user = $this->conn;
-				$user->setTable('admin');
+				$user->setTable('tutors');
 				$result = $user->where('id','=',$id)
 				->update([
 					'email' 				=> $email,
@@ -67,7 +67,7 @@ class Profile
 		try {
 				$password = password_hash($fpassword, PASSWORD_DEFAULT);
 				$user = $this->conn;
-				$user->setTable('admin');
+				$user->setTable('tutors');
 				$result = $user->where('id','=',$id)->update([
 					'password' => $password
 				]);
