@@ -15,11 +15,16 @@
     <link href="assets/css/animate.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 
-    <!-- DatePicker -->
-    <link href="assets/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <!-- FormValidation CSS file -->
+    <link rel="stylesheet" href="assets/css/formValidation.min.css">
+
+    <!-- Ladda style -->
+    <link rel="stylesheet" href="assets/css/plugins/ladda/ladda-themeless.min.css">
 
     <!-- FooTable -->
-    <link href="assets/css/plugins/footable/footable.core.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/plugins/footable/footable.core.css">
+
+
 
 </head>
 
@@ -102,7 +107,7 @@
 
         <div class="wrapper wrapper-content animated fadeInRight">
           <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-8">
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
                             <h5>Assignment</h5>
@@ -116,95 +121,36 @@
                             </div>
                         </div>
                         <div class="ibox-content">
-                            <input type="text" class="form-control input-sm m-b-xs" id="filter"
-                                   placeholder="Search in table">
+                          <div id="message">
 
-                            <!-- <table class="footable table table-stripped" data-page-size="8" data-filter=#filter>
+                          </div>
+                            <input type="text" class="form-control input-sm m-b-xs" id="filter" placeholder="Search in table">
+                            <table class="footable table table-stripped" data-page-size="10" data-filter=#filter>
                                 <thead>
                                 <tr>
                                   <th>Subject ID</th>
-                                  <th>Name</th>
+                                  <th>File Name</th>
                                   <th>Number</th>
+                                  <th data-hide="phone,tablet">Name</th>
+                                  <th data-hide="phone,tablet">Last Update</th>
                                   <th>Action</th>
                                 </tr>
                                 </thead>
-                                <tbody>
-                                <tr class="ScoreX">
-                                    <td>BIT308</td>
-                                    <td>Technology Information</td>
-                                    <td>1</td>
-                                    <td><i class="fa fa-download" aria-hidden="true"></i> | <i class="fa fa-edit" aria-hidden="true"></i> | <i class="fa fa-trash" aria-hidden="true"></i></td>
-                                </tr>
-                                <tr class="ScoreC">
-                                    <td>BIT306</td>
-                                    <td>Introduction Programming C++</td>
-                                    <td>1</td>
-                                    <td><i class="fa fa-download" aria-hidden="true"></i> | <i class="fa fa-edit" aria-hidden="true"></i> | <i class="fa fa-trash" aria-hidden="true"></i></td>
-
-                                </tr>
-                                <tr class="ScoreA">
-                                    <td>BIT301</td>
-                                    <td>Web Interface</td>
-                                    <td>1</td>
-                                    <td><i class="fa fa-download" aria-hidden="true"></i> | <i class="fa fa-edit" aria-hidden="true"></i> | <i class="fa fa-trash" aria-hidden="true"></i></td>
-
-                                </tr>
-                                <tr class="ScoreA">
-                                    <td>BIT310</td>
-                                    <td>Programming Java</td>
-                                    <td>1</td>
-                                    <td><i class="fa fa-download" aria-hidden="true"></i> | <i class="fa fa-edit" aria-hidden="true"></i> | <i class="fa fa-trash" aria-hidden="true"></i></td>
-
-                                </tr>
-
-                                <tr class="ScoreA">
-                                    <td>BIT201</td>
-                                    <td>Software Engineering</td>
-                                    <td>1</td>
-                                    <td><i class="fa fa-download" aria-hidden="true"></i> | <i class="fa fa-edit" aria-hidden="true"></i> | <i class="fa fa-trash" aria-hidden="true"></i></td>
-
-                                </tr>
-                                <tr class="ScoreA">
-                                    <td>BIT206</td>
-                                    <td>English 1</td>
-                                    <td>1</td>
-                                    <td><i class="fa fa-download" aria-hidden="true"></i> | <i class="fa fa-edit" aria-hidden="true"></i> | <i class="fa fa-trash" aria-hidden="true"></i></td>
-
-                                </tr>
-                                <tr class="ScoreA">
-                                    <td>BIT306</td>
-                                    <td>Web Publishing</td>
-                                    <td>1</td>
-                                    <td><i class="fa fa-download" aria-hidden="true"></i> | <i class="fa fa-edit" aria-hidden="true"></i> | <i class="fa fa-trash" aria-hidden="true"></i></td>
-
-                                </tr>
-                                <tr class="ScoreA">
-                                    <td>BIT108</td>
-                                    <td>Programming Python</td>
-                                    <td>1</td>
-                                    <td><i class="fa fa-download" aria-hidden="true"></i> | <i class="fa fa-edit" aria-hidden="true"></i> | <i class="fa fa-trash" aria-hidden="true"></i></td>
-
-                                </tr>
-                                <tr class="ScoreA">
-                                    <td>BIT311</td>
-                                    <td>iPod Touch / iPhone</td>
-                                    <td>1</td>
-                                    <td>Complete</td>
-
-                                </tr>
+                                <tbody class="data-assignment">
+                                  <!-- Load Jquery -->
                                 </tbody>
                                 <tfoot>
                                 <tr>
-                                  <td colspan="5">
+                                  <td colspan="6">
                                       <ul class="pagination pull-right"></ul>
                                   </td>
                                 </tr>
                                 </tfoot>
-                            </table> -->
+                            </table>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-4">
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
                             <h5>Create Assignment</h5>
@@ -220,26 +166,13 @@
                         <div class="ibox-content">
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <form role="form">
-                                        <div class="form-group">
-                                          <label>Subject ID</label>
-                                          <select name="subjectID" class="form-control chosen-select" data-placeholder="Choose a subject id" tabindex="2">
-                                          </select>
-                                        </div>
-                                        <div class="form-group">
-                                          <label>Number</label>
-                                          <select name="course-code" class="form-control">
-                                            <option value="">Select</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                          </select>
-                                        </div>
-                                        <div class="form-group">
-                                          <label>Assignment File</label>
-                                          <input type="file" name="assignment_file" class="form-control">
-                                        </div>
+                                  <div id="message-add">
+
+                                  </div>
+                                    <form role="form" id="data-form-add">
+                                        <?php include 'templates/part/form-assignment.php'; ?>
                                         <div>
-                                            <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>Submit</strong></button>
+                                            <button class="btn btn-sm btn-primary pull-right m-t-n-xs ladda-button" type="submit" data-style="expand-right" name="btn-assignment-add">Submit</button>
                                         </div>
                                     </form>
                                 </div>
@@ -249,6 +182,56 @@
                 </div>
           </div>
         </div>
+
+        <!-- Start Modals Edit Lecturer -->
+        <div id="modal-form-update" class="modal fade" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h3 class="m-t-none m-b">Edit Lecturer</h3>
+                                <p>Make sure your data</p>
+
+                                <form role="form" id="form-data-update" method="POST">
+
+                                  <!-- Form Lecturer -->
+                                  <?php include 'templates/part/form-assignment.php'; ?>
+
+                                    <input type="hidden" name="id" class="form-control">
+                                    <div>
+                                      <button class="btn btn-sm btn-primary ladda-button padding-btn" data-style="expand-right" type="submit" name="btn-update-assignment">OK</button>
+                                      <button id="cancel-btn-update" class="btn btn-sm btn-primary padding-btn" type="submit">Cancel</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Modals Edit Lecturer -->
+
+        <!-- Starts Modals Confirmation Delete -->
+              <div id="modal-form-delete" class="modal fade" aria-hidden="true">
+                  <div class="modal-dialog">
+                      <div class="modal-content">
+                          <div class="modal-body">
+                              <div class="row">
+                                  <div class="col-sm-12">
+                                      <h3 class="m-t-none m-b">Delete Confirmation</h3>
+                                      <div id="confirm"></div>
+                                      <div>
+                                          <button id="sure" type="button" name="btn-delete" class="btn btn-primary padding-btn ladda-button" type="submit" data-style="expand-right">Ok</button>
+                                          <button id="cancel" type="button" class="btn btn-primary padding-btn">Cancel</button>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- End Modals Confirmation Delete-->
 
         <div class="footer">
             <div class="pull-right">
@@ -269,8 +252,14 @@
 <script src="assets/js/theme.js"></script>
 <script src="assets/js/plugins/pace/pace.min.js"></script>
 
-<!-- Data picker -->
-<script src="assets/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<!-- FormValidation plugin and the class supports validating Bootstrap form -->
+<script src="assets/js/formValidation.min.js"></script>
+<script src="assets/js/framework/bootstrap.min.js"></script>
+
+<!-- Ladda -->
+<script src="assets/js/plugins/ladda/spin.min.js"></script>
+<script src="assets/js/plugins/ladda/ladda.min.js"></script>
+<script src="assets/js/plugins/ladda/ladda.jquery.min.js"></script>
 
 <!-- FooTable -->
 <script src="assets/js/plugins/footable/footable.all.min.js"></script>
