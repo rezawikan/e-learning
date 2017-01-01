@@ -126,8 +126,8 @@
                                   <th>Name</th>
                                   <th>Course ID</th>
                                   <th>Quiz</th>
-                                  <th>Assignment 1</th>
-                                  <th>Assignment 2</th>
+                                  <th data-hide="phone,tablet">Assignment 1</th>
+                                  <th data-hide="phone,tablet">Assignment 2</th>
                                 </tr>
                                 </thead>
                                 <tbody id="data-score">

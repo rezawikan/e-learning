@@ -7,13 +7,13 @@ $(document).ready(function() {
     function loadDataCourses()
     {
       $.ajax({
-        url: 'function/Score/ViewDataScore.php',
+        url: 'function/Assignment/ViewDataAssignment.php',
         type: 'POST',
         success: function(result){
             console.log(result);
             var resultObj = JSON.parse(result);
 
-            var handler = $('#data-score');
+            var handler = $('#data-assignments');
 
             handler.html("");
 
@@ -25,7 +25,7 @@ $(document).ready(function() {
             } else {
                 $.each(resultObj, function(index, el) {
                   var rows    = $('<tr>');
-                  rows.html("<td>"+el.id+"</td><td>"+el.first_name+" "+el.last_name+"</td><td>"+el.subject_id+"</td><td>"+el.quiz+"</td><td><a href='../uploads/assignment/"+el.assignment_one+"' target='_blank'>"+el.assignment_one+"</a></td><td><a href='../uploads/assignment/"+el.assignment_two+"' target='_blank'>"+el.assignment_two+"</a></td>");
+                  rows.html("<td>"+el.subject_id+"</td><td><a href='../uploads/assignment/"+el.assignment_one+"' target='_blank'>Assignment 1</a></td><td><a href='../uploads/assignment/"+el.assignment_two+"' target='_blank'>Assignment 2</a></td>");
                   handler.append(rows).trigger('footable_redraw');
                 });
             }

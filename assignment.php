@@ -14,9 +14,6 @@
     <link href="assets/css/animate.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 
-    <!-- DatePicker -->
-    <link href="assets/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
-
     <!-- FooTable -->
     <link href="assets/css/plugins/footable/footable.core.css" rel="stylesheet">
 
@@ -130,59 +127,15 @@
                                 <thead>
                                 <tr>
                                   <th>Subject ID</th>
-                                  <th>Name</th>
-                                  <th>Action</th>
+                                  <th>Assignment 1</th>
+                                  <th>Assignmet 2</th>
                                 </tr>
                                 </thead>
-                                <tbody>
-                                <tr class="ScoreX">
+                                <tbody id="data-assignments">
+                                <!-- <tr class="ScoreX">
                                     <td>BIT308</td>
                                     <td>Technology Information</td>
-                                    <td>Download <i class="fa fa-download" aria-hidden="true"></i></td>
-                                </tr>
-                                <tr class="ScoreC">
-                                    <td>BIT306</td>
-                                    <td>Introduction Programming C++</td>
-                                    <td>Download <i class="fa fa-download" aria-hidden="true"></i></td>
-
-                                </tr>
-                                <tr class="ScoreA">
-                                    <td>BIT301</td>
-                                    <td>Web Interface</td>
-                                    <td>Download <i class="fa fa-download" aria-hidden="true"></i></td>
-
-                                </tr>
-                                <tr class="ScoreA">
-                                    <td>BIT310</td>
-                                    <td>Programming Java</td>
-                                    <td>Download <i class="fa fa-download" aria-hidden="true"></i></td>
-
-                                </tr>
-                                <tr class="ScoreA">
-                                    <td>BIT201</td>
-                                    <td>Software Engineering</td>
-                                    <td>Download <i class="fa fa-download" aria-hidden="true"></i></td>
-
-                                </tr>
-                                <tr class="ScoreA">
-                                    <td>BIT206</td>
-                                    <td>English 1</td>
-                                    <td>Download <i class="fa fa-download" aria-hidden="true"></i></td>
-                                </tr>
-                                <tr class="ScoreA">
-                                    <td>BIT306</td>
-                                    <td>Web Publishing</td>
-                                    <td>Download <i class="fa fa-download" aria-hidden="true"></i></td>
-                                </tr>
-                                <tr class="ScoreA">
-                                    <td>BIT108</td>
-                                    <td>Programming Python</td>
-                                    <td>Download <i class="fa fa-download" aria-hidden="true"></i></td>
-                                </tr>
-                                <tr class="ScoreA">
-                                    <td>BIT311</td>
-                                    <td>iPod Touch / iPhone</td>
-                                    <td>Download <i class="fa fa-download" aria-hidden="true"></i></td>
+                                    <td>Download <i class="fa fa-download" aria-hidden="true"></i></td> -->
                                 </tr>
                                 </tbody>
                                 <tfoot>
@@ -217,27 +170,12 @@
 <script src="assets/js/theme.js"></script>
 <script src="assets/js/plugins/pace/pace.min.js"></script>
 
-<!-- Data picker -->
-<script src="assets/js/plugins/datapicker/bootstrap-datepicker.js"></script>
-
 <!-- FooTable -->
 <script src="assets/js/plugins/footable/footable.all.min.js"></script>
 
+<!-- FooTable -->
+<script src="assets/js/page/assignment.js"></script>
 
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('.footable').footable();
-
-    $('#data_2 .input-group.date').datepicker({
-        startView: 1,
-        todayBtn: "linked",
-        keyboardNavigation: false,
-        forceParse: false,
-        autoclose: true,
-        format: "dd/mm/yyyy"
-      });
-  });
-</script>
 
 </body>
 

@@ -15,7 +15,15 @@
     <link href="assets/css/animate.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 
-    <link href="assets/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <!-- FormValidation CSS file -->
+    <link rel="stylesheet" href="assets/css/formValidation.min.css">
+
+    <!-- Ladda style -->
+    <link rel="stylesheet" href="assets/css/plugins/ladda/ladda-themeless.min.css">
+
+    <!-- FooTable -->
+    <link rel="stylesheet" href="assets/css/plugins/footable/footable.core.css">
+
 
 </head>
 
@@ -127,23 +135,30 @@
                     <div class="ibox-content">
                         <div class="row">
                             <div class="col-sm-12">
-                                <form role="form">
+                              <div id="message-add">
+
+                              </div>
+                                <form role="form" id="data-form-add">
                                     <div class="form-group">
                                       <label>Subject ID</label>
-                                      <select name="subject-id" class="form-control">
+                                      <select name="student_data_id" class="form-control">
+                                      </select>
+                                    </div>
+                                    <div class="form-group">
+                                      <label>Number</label>
+                                      <select name="number" class="form-control">
                                         <option value="">Select</option>
-                                        <option value="">BIT106</option>
-                                        <option value="">BIT109</option>
-                                        <option value="">BIT101</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
                                       </select>
                                     </div>
                                     <div class="form-group">
                                       <label>Assignment Files</label>
-                                      <input type="file" name="username" class="form-control">
-                                      <p class="help-block">Only .rar</p>
+                                      <input type="file" name="assignment_file" class="form-control">
+                                      <p class="help-block">Only PDF</p>
                                     </div>
                                     <div>
-                                        <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>Submit</strong></button>
+                                        <button class="btn btn-sm btn-primary pull-right m-t-n-xs ladda-button" data-style="expand-right" type="submit" name="btn-assignment-add">Submit</button>
                                     </div>
                                 </form>
                             </div>
@@ -200,21 +215,21 @@
 <script src="assets/js/theme.js"></script>
 <script src="assets/js/plugins/pace/pace.min.js"></script>
 
-<!-- Data picker -->
-<script src="assets/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<!-- FormValidation plugin and the class supports validating Bootstrap form -->
+<script src="assets/js/formValidation.min.js"></script>
+<script src="assets/js/framework/bootstrap.min.js"></script>
 
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('#data_2 .input-group.date').datepicker({
-        startView: 1,
-        todayBtn: "linked",
-        keyboardNavigation: false,
-        forceParse: false,
-        autoclose: true,
-        format: "dd/mm/yyyy"
-      });
-  });
-</script>
+<!-- Ladda -->
+<script src="assets/js/plugins/ladda/spin.min.js"></script>
+<script src="assets/js/plugins/ladda/ladda.min.js"></script>
+<script src="assets/js/plugins/ladda/ladda.jquery.min.js"></script>
+
+<!-- FooTable -->
+<script src="assets/js/plugins/footable/footable.all.min.js"></script>
+
+<!-- Assignment -->
+<script src="assets/js/page/upload-assignment.js"></script>
+
 
 </body>
 

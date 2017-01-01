@@ -15,9 +15,6 @@
     <link href="assets/css/animate.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 
-    <!-- DatePicker -->
-    <link href="assets/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
-
     <!-- FooTable -->
     <link href="assets/css/plugins/footable/footable.core.css" rel="stylesheet">
 
@@ -235,27 +232,11 @@
 <script src="assets/js/theme.js"></script>
 <script src="assets/js/plugins/pace/pace.min.js"></script>
 
-<!-- Data picker -->
-<script src="assets/js/plugins/datapicker/bootstrap-datepicker.js"></script>
-
 <!-- FooTable -->
 <script src="assets/js/plugins/footable/footable.all.min.js"></script>
 
-
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('.footable').footable();
-
-    $('#data_2 .input-group.date').datepicker({
-        startView: 1,
-        todayBtn: "linked",
-        keyboardNavigation: false,
-        forceParse: false,
-        autoclose: true,
-        format: "dd/mm/yyyy"
-      });
-  });
-</script>
+<!-- FooTable -->
+<script src="assets/js/page/score.js"></script>
 
 </body>
 

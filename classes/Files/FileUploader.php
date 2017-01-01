@@ -1,8 +1,8 @@
 <?php
 
-namespace Emall\Files;
+namespace Elearn\Files;
 
-use Emall\Database\Database;
+use Elearn\Database\Database;
 
 class FileUploader
 {
@@ -16,19 +16,7 @@ class FileUploader
 
   protected $fileDirectory;
 
-  protected $userID;
-
-  protected $dataImage;
-
-  protected $table;
-
-  protected $dataFields;
-
-  protected $whereCondition;
-
-  protected $status = 'main';
-
-  protected $lastIDImage;
+  public $dataFile;
 
   public function __construct()
   {
@@ -71,7 +59,7 @@ class FileUploader
     return pathinfo($this->fileData['name'],PATHINFO_EXTENSION);
   }
 
-  protected function setDestination()
+  public function setDestination()
   {
     $this->setFileName();
     $this->destination = $this->fileDirectory . $this->fileName;
@@ -84,7 +72,7 @@ class FileUploader
 
   protected function FileExsist()
   {
-    return file_exists($this->fileDirectory . $this->dataImage);
+    return file_exists($this->fileDirectory . $this->dataFile);
   }
 
   public function MoveFiles()
@@ -92,11 +80,11 @@ class FileUploader
     move_uploaded_file($this->fileData['tmp_name'], $this->destination);
   }
 
-  protected function DeletePrevImage()
+  public function DeletePrevFile()
   {
     if($this->FileExsist() == true) {
-      if ($this->dataImage != 'defaults.jpg' && $this->dataImage != null) {
-          unlink($this->fileDirectory . $this->dataImage);
+      if ($this->dataFile != null) {
+          unlink($this->fileDirectory . $this->dataFile);
           return true;
       }
     }
@@ -110,7 +98,6 @@ class FileUploader
     $this->destination    = "";
     $this->fileDirectory  = "";
     $this->userID         = "";
-    $this->dataImage      = "";
-    $this->lastIDImage    = "";
+    $this->dataFile      = "";
   }
 }
