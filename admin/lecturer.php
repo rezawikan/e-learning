@@ -21,11 +21,11 @@
     <!-- Ladda style -->
     <link rel="stylesheet" href="assets/css/plugins/ladda/ladda-themeless.min.css">
 
-    <!-- DatePicker -->
-    <link rel="stylesheet" href="assets/css/plugins/datapicker/datepicker3.css">
-
     <!-- FooTable -->
     <link rel="stylesheet" href="assets/css/plugins/footable/footable.core.css">
+
+    <!-- DatePicker -->
+    <link rel="stylesheet" href="assets/css/plugins/datapicker/datepicker3.css">
 
 </head>
 
@@ -255,12 +255,12 @@
 <script src="assets/js/theme.js"></script>
 <script src="assets/js/plugins/pace/pace.min.js"></script>
 
-<!-- Data picker -->
-<script src="assets/js/plugins/datapicker/bootstrap-datepicker.js"></script>
-
 <!-- FormValidation plugin and the class supports validating Bootstrap form -->
 <script src="assets/js/formValidation.min.js"></script>
 <script src="assets/js/framework/bootstrap.min.js"></script>
+
+<!-- Data picker -->
+<script src="assets/js/plugins/datapicker/bootstrap-datepicker.js"></script>
 
 <!-- Ladda -->
 <script src="assets/js/plugins/ladda/spin.min.js"></script>

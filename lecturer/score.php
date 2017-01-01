@@ -123,26 +123,27 @@
                                 <thead>
                                 <tr>
                                   <th>Student ID</th>
+                                  <th>Name</th>
                                   <th>Course ID</th>
-                                  <th>Quiz 1</th>
-                                  <th>Quiz 2</th>
+                                  <th>Quiz</th>
                                   <th>Assignment 1</th>
                                   <th>Assignment 2</th>
                                 </tr>
                                 </thead>
                                 <tbody id="data-score">
-                                  <!-- <tr class="ScoreX">
+                                   <!-- <tr class="ScoreX">
                                       <td>132113423</td>
                                       <td>BIT308</td>
                                       <td>100</td>
                                       <td>95</td>
                                       <td class="center">Complete</td>
                                       <td class="center">Complete</td>
-                                  </tr>
-                                </tbody> -->
+                                  </tr>  -->
+
+                                </tbody>
                                 <tfoot>
                                 <tr>
-                                  <td colspan="5">
+                                  <td colspan="6">
                                       <ul class="pagination pull-right"></ul>
                                   </td>
                                 </tr>

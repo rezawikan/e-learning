@@ -24,7 +24,7 @@ class Score
         $result = $user->join('enrollments','courses.id','=','enrollments.courses_id')
         ->join('student_data','enrollments.student_data_id','=','student_data.id')
         ->join('students','enrollments.student_id','=','students.id')
-        ->select('courses.name, courses.subject_id, students.first_name, students.last_name, student_data.quiz, student_data.assignment_one, student_data.assignment_two')
+        ->select('courses.name, courses.subject_id, students.id, students.first_name, students.last_name, student_data.quiz, student_data.assignment_one, student_data.assignment_two')
         ->where('tutors_id','=', $tutors_id)
         ->all();
 

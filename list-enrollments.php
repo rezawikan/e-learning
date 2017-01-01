@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>e-Learning | Upload Assignment</title>
+    <title>E-Learning | List Courses</title>
 
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet">
@@ -15,7 +15,14 @@
     <link href="assets/css/animate.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 
-    <link href="assets/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <!-- FormValidation CSS file -->
+    <link rel="stylesheet" href="assets/css/formValidation.min.css">
+
+    <!-- Ladda style -->
+    <link rel="stylesheet" href="assets/css/plugins/ladda/ladda-themeless.min.css">
+
+    <!-- FooTable -->
+    <link rel="stylesheet" href="assets/css/plugins/footable/footable.core.css">
 
 </head>
 
@@ -26,9 +33,6 @@
             <ul class="nav metismenu" id="side-menu">
                 <li class="nav-header">
                     <div class="dropdown profile-element">
-                            <span>
-                                <img alt="image" class="img-circle" src="assets/img/profile_small.jpg" />
-                            </span>
                             <a href="#">
                                 <span class="clear">
                                     <span class="block m-t-xs"> <strong class="font-bold"><?php echo $user->fullName; ?></strong></span>
@@ -46,16 +50,16 @@
                 <li>
                     <a href="my-profile.php"><i class="fa fa-user"></i> <span class="nav-label">My Profile</span> </a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="list-enrollments.php"><i class="fa fa-book"></i> <span class="nav-label">List Enrollments</span> </a>
                 </li>
                 <li>
                     <a href="my-courses.php"><i class="fa fa-bookmark"></i> <span class="nav-label">My Courses</span> </a>
                 </li>
-                <li class="active">
+                <li>
                   <a href="#"><i class="fa fa-exchange"></i> <span class="nav-label">Assignment</span> </a>
                   <ul class="nav nav-second-level collapse">
-                    <li class="active">
+                    <li>
                       <a href="upload-assignment.php">Upload Assignment</a>
                     </li>
                     <li>
@@ -70,7 +74,6 @@
                     <a href="quiz.php"><i class="fa fa-users"></i> <span class="nav-label">Quiz</span> </a>
                 </li>
             </ul>
-
         </div>
     </nav>
 
@@ -87,21 +90,17 @@
                         </a>
                     </li>
                 </ul>
-
             </nav>
         </div>
         <div class="row wrapper border-bottom white-bg page-heading">
           <div class="col-lg-10">
-              <h2>Upload Assignment</h2>
+              <h2>List Enrollments</h2>
               <ol class="breadcrumb">
                   <li>
                       <a href="index.html">Home</a>
                   </li>
-                  <li>
-                      <a href="#">Assignment</a>
-                  </li>
                   <li class="active">
-                      <strong>Upload Assignment</strong>
+                      <strong>List Enrollments</strong>
                   </li>
               </ol>
           </div>
@@ -110,51 +109,12 @@
         </div>
 
         <div class="wrapper wrapper-content animated fadeInRight">
-            <div class="row">
-            <div class="col-lg-7">
-                <div class="ibox float-e-margins">
-                    <div class="ibox-title">
-                        <h5>Upload Assignment</h5>
-                        <div class="ibox-tools">
-                            <a class="collapse-link">
-                                <i class="fa fa-chevron-up"></i>
-                            </a>
-                            <a class="close-link">
-                                <i class="fa fa-times"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="ibox-content">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <form role="form">
-                                    <div class="form-group">
-                                      <label>Subject ID</label>
-                                      <select name="subject-id" class="form-control">
-                                        <option value="">Select</option>
-                                        <option value="">BIT106</option>
-                                        <option value="">BIT109</option>
-                                        <option value="">BIT101</option>
-                                      </select>
-                                    </div>
-                                    <div class="form-group">
-                                      <label>Assignment Files</label>
-                                      <input type="file" name="username" class="form-control">
-                                      <p class="help-block">Only .rar</p>
-                                    </div>
-                                    <div>
-                                        <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>Submit</strong></button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-                <div class="col-lg-5">
+          <div class="row">
+            <div class="col-lg-12">
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
-                            <h5>Tips</h5>
+                            <h5>Enroll Courses</h5>
+
                             <div class="ibox-tools">
                                 <a class="collapse-link">
                                     <i class="fa fa-chevron-up"></i>
@@ -165,25 +125,48 @@
                             </div>
                         </div>
                         <div class="ibox-content">
-                          <div class="row">
-                              <div class="col-sm-12">
-                                <ol>
-                                  <li>First</li>
-                                  <li>Second</li>
-                                  <li>Third</li>
-                                  <li>Fourth</li>
-                                </ol>
-                              </div>
+                          <div id="message">
+
                           </div>
+                            <input type="text" class="form-control input-sm m-b-xs" id="filter" placeholder="Search">
+                            <table class="footable table table-stripped" data-page-size="8" data-filter=#filter>
+                                <thead>
+                                <tr>
+                                  <th>Subject ID</th>
+                                  <th>Name</th>
+                                  <th>Status</th>
+                                  <th data-hide="phone,tablet">Tutor Name </th>
+                                  <th data-hide="phone,tablet">Description </th>
+                                  <th data-hide="phone,tablet">Action</th>
+                                </tr>
+                                </thead>
+                                <tbody id="data-enrollments">
+                                <!-- <tr class="ScoreX">
+                                    <td>BIT308</td>
+                                    <td>Technology Information</td>
+                                    <td>Complete</td>
+                                    <td>Mochammad Rezza</td>
+                                    <td class="center">Learn about technology</td>
+                                    <td class="center"><button class="btn btn-primary" type="button" name="button">Enroll</button></td>
+                                </tr> -->
+                                </tbody>
+                                <tfoot>
+                                <tr>
+                                    <td colspan="6">
+                                        <ul class="pagination pull-right"></ul>
+                                    </td>
+                                </tr>
+                                </tfoot>
+                            </table>
                         </div>
                     </div>
                 </div>
-            </div>
+          </div>
         </div>
 
         <div class="footer">
             <div class="pull-right">
-                <strong>Copyright</strong> e-learning Co., Ltd. &copy; 2016
+                <strong>Copyright</strong> E-Learning Co., Ltd. &copy; 2016
             </div>
         </div>
 
@@ -200,21 +183,21 @@
 <script src="assets/js/theme.js"></script>
 <script src="assets/js/plugins/pace/pace.min.js"></script>
 
-<!-- Data picker -->
-<script src="assets/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<!-- FormValidation plugin and the class supports validating Bootstrap form -->
+<script src="assets/js/formValidation.min.js"></script>
+<script src="assets/js/framework/bootstrap.min.js"></script>
 
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('#data_2 .input-group.date').datepicker({
-        startView: 1,
-        todayBtn: "linked",
-        keyboardNavigation: false,
-        forceParse: false,
-        autoclose: true,
-        format: "dd/mm/yyyy"
-      });
-  });
-</script>
+<!-- Ladda -->
+<script src="assets/js/plugins/ladda/spin.min.js"></script>
+<script src="assets/js/plugins/ladda/ladda.min.js"></script>
+<script src="assets/js/plugins/ladda/ladda.jquery.min.js"></script>
+
+<!-- FooTable -->
+<script src="assets/js/plugins/footable/footable.all.min.js"></script>
+
+<!-- Enrollments -->
+<script src="assets/js/page/enrollments.js"></script>
+
 
 </body>
 

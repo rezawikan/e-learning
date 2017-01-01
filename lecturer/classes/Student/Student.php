@@ -26,10 +26,8 @@ class Student
         ->select('enrollments.student_id, students.first_name, students.last_name, students.email, students.username, courses.subject_id')
         ->where('courses.tutors_id','=', $tutors_id)
         ->orderBy('students.update_at','DESC')->all();
-        
-        if ($result != null) {
-          echo json_encode($result);
-        }
+
+        return $result;
 
     } catch (PDOException $e) {
       echo "Error : ".$e->getMessage();

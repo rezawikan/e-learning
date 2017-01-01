@@ -47,7 +47,7 @@
                     <a href="my-profile.php"><i class="fa fa-user"></i> <span class="nav-label">My Profile</span> </a>
                 </li>
                 <li>
-                    <a href="list-courses.php"><i class="fa fa-book"></i> <span class="nav-label">List Courses</span> </a>
+                    <a href="list-enrollments.php"><i class="fa fa-book"></i> <span class="nav-label">List Enrollments</span> </a>
                 </li>
                 <li>
                     <a href="my-courses.php"><i class="fa fa-bookmark"></i> <span class="nav-label">My Courses</span> </a>

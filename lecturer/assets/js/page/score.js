@@ -25,7 +25,7 @@ $(document).ready(function() {
             } else {
                 $.each(resultObj, function(index, el) {
                   var rows    = $('<tr>');
-                  rows.html("<td>"+el.subject_id+"</td><td>"+el.name+"</td><td>"+el.description+"</td><td>"+el.day+"</td><td>"+el.time+"</td>");
+                  rows.html("<td>"+el.id+"</td><td>"+el.first_name+" "+el.last_name+"</td><td>"+el.subject_id+"</td><td>"+el.quiz+"</td><td>"+el.assignment_one+"</td><td>"+el.assignment_two+"</td>");
                   handler.append(rows).trigger('footable_redraw');
                 });
             }

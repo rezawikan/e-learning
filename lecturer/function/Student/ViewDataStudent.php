@@ -12,7 +12,9 @@ if (isset($_COOKIE['tutors'])) {
     $tutors_id = $_COOKIE['tutors'];
     $response  = $lecturer->ViewDataStudent($tutors_id);
 
-    if ($response == null){
+    if ($response){
+        echo json_encode($response);
+    } else {
         $result['empty'] = 'Data student is empty';
         echo json_encode($result);
     }

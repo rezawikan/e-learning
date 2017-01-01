@@ -24,10 +24,6 @@
     <!-- FooTable -->
     <link href="assets/css/plugins/footable/footable.core.css" rel="stylesheet">
 
-    <!-- Clock Picker -->
-    <link href="assets/css/plugins/clockpicker/clockpicker.css" rel="stylesheet">
-
-
 
 </head>
 
