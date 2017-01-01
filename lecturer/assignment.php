@@ -61,6 +61,9 @@
                     <a href="assignment.php"><i class="fa fa-exchange"></i> <span class="nav-label">Assignment</span> </a>
                 </li>
                 <li>
+                    <a href="student.php"><i class="fa fa-users"></i> <span class="nav-label">Student</span> </a>
+                </li>
+                <li>
                     <a href="Score.php"><i class="fa fa-area-chart"></i> <span class="nav-label">Score</span> </a>
                 </li>
                 <li>
@@ -124,7 +127,7 @@
                           <div id="message">
 
                           </div>
-                            <input type="text" class="form-control input-sm m-b-xs" id="filter" placeholder="Search in table">
+                            <input type="text" class="form-control input-sm m-b-xs" id="filter" placeholder="Search">
                             <table class="footable table table-stripped" data-page-size="10" data-filter=#filter>
                                 <thead>
                                 <tr>

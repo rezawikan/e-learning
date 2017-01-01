@@ -5,7 +5,7 @@ require_once '../../vendor/autoload.php';
 use Elearn\Profile\Profile;
 use Elearn\Auth\Redirect;
 
-$admin 	= new Profile;
+$lecturer 	= new Profile;
 $home_url = '../../../index.php'; // redirect link
 
 
@@ -26,7 +26,7 @@ if (isset($_POST['email'],
     $id         = $_COOKIE['tutors'];
 
 
-		if ($admin->updateUser($email, $firstName, $lastName, $gender, $date, $id)) {
+		if ($lecturer->updateUser($email, $firstName, $lastName, $gender, $date, $id)) {
 				  echo json_encode(array('success' => 'Success to registration', 'process' => 'success'));
 	  } else {
 	      echo json_encode(array('error' => 'Failed to registration', 'process' => 'failed'));

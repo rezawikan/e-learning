@@ -60,6 +60,9 @@
                     <a href="assignment.php"><i class="fa fa-exchange"></i> <span class="nav-label">Assignment</span> </a>
                 </li>
                 <li>
+                    <a href="student.php"><i class="fa fa-users"></i> <span class="nav-label">Student</span> </a>
+                </li>
+                <li>
                     <a href="Score.php"><i class="fa fa-area-chart"></i> <span class="nav-label">Score</span> </a>
                 </li>
                 <li>

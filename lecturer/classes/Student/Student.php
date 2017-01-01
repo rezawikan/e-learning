@@ -16,90 +16,25 @@ class Student
 	}
 
 
-  public function createDataStudent($email, $username, $firstName, $lastName, $gender, $date, $password)
-  {
-    try {
-        $pass = password_hash($password, PASSWORD_DEFAULT);
-        $user = $this->conn;
-        $user->setTable('students');
-        $result = $user->create([
-          'email' 					=> $email,
-          'username'				=> $username,
-          'first_name'			=> $firstName,
-          'last_name'				=> $lastName,
-          'gender'					=> $gender,
-          'date_of_birth'		=> $date,
-          'password'				=> $pass,
-          'create_at' 			=> date_format(new DateTime(), 'Y-m-d H:i:s')
-        ]);
-
-        return true;
-    } catch (PDOException $e) {
-      echo "Error : ".$e->getMessage();
-    }
-  }
-
-
-  public function ViewDataStudent()
+  public function ViewDataStudent($tutors_id)
   {
     try {
         $user = $this->conn;
         $user->setTable('students');
-        $result = $user->select()->all();
+        $result = $user->join('enrollments','students.id','=','enrollments.student_id')
+        ->join('courses','enrollments.courses_id','=','courses.id')
+        ->select('enrollments.student_id, students.first_name, students.last_name, students.email, students.username, courses.subject_id')
+        ->where('courses.tutors_id','=', $tutors_id)
+        ->orderBy('students.update_at','DESC')->all();
+        
+        if ($result != null) {
+          echo json_encode($result);
+        }
 
-        echo json_encode($result);
     } catch (PDOException $e) {
       echo "Error : ".$e->getMessage();
     }
   }
-
-  public function EditDataStudent($id)
-  {
-    try {
-        $user = $this->conn;
-        $user->setTable('students');
-        $result = $user->select()->where('id','=',$id)->first();
-
-        echo json_encode($result);
-    } catch (PDOException $e) {
-      echo "Error : ".$e->getMessage();
-    }
-  }
-
-
-  public function UpdateDataStudent($email, $firstName, $lastName, $gender, $date, $id)
-  {
-    try {
-        $user = $this->conn;
-        $user->setTable('students');
-        $result = $user->where('id','=',$id)->update([
-          'email' 					=> $email,
-          'first_name'			=> $firstName,
-          'last_name'				=> $lastName,
-          'gender'					=> $gender,
-          'date_of_birth'		=> $date
-        ]);
-
-        return true;
-    } catch (PDOException $e) {
-      echo "Error : ".$e->getMessage();
-    }
-  }
-
-
-  public function DeleteDataStudent($id)
-  {
-    try {
-        $user = $this->conn;
-        $user->setTable('students');
-        $result = $user->where('id','=',$id)->delete();
-
-        return true;
-    } catch (PDOException $e) {
-      echo "Error : ".$e->getMessage();
-    }
-  }
-
 
   public function CountDataStudent()
   {
