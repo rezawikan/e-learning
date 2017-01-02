@@ -16,8 +16,6 @@ class Assignment
 	}
 
 
-
-
   public function ViewDataTutorsID($tutors_id)
   {
     try {

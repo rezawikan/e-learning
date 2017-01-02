@@ -15,7 +15,14 @@
     <link href="assets/css/animate.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 
-    <link href="assets/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <!-- FormValidation CSS file -->
+    <link rel="stylesheet" href="assets/css/formValidation.min.css">
+
+    <!-- Ladda style -->
+    <link rel="stylesheet" href="assets/css/plugins/ladda/ladda-themeless.min.css">
+
+    <!-- FooTable -->
+    <link rel="stylesheet" href="assets/css/plugins/footable/footable.core.css">
 
 </head>
 
@@ -64,7 +71,7 @@
                     <a href="Score.php"><i class="fa fa-area-chart"></i> <span class="nav-label">Score</span> </a>
                 </li>
                 <li class="active">
-                    <a href="quiz.php"><i class="fa fa-users"></i> <span class="nav-label">Quiz</span> </a>
+                    <a href="#"><i class="fa fa-users"></i> <span class="nav-label">Quiz</span> </a>
                 </li>
             </ul>
         </div>
@@ -104,7 +111,7 @@
 
         <div class="wrapper wrapper-content animated fadeInRight">
             <div class="row">
-              <div class="col-lg-5">
+              <div class="col-lg-12">
                   <div class="ibox float-e-margins">
                       <div class="ibox-title">
                           <h5>Select Quiz</h5>
@@ -120,26 +127,39 @@
                       <div class="ibox-content">
                           <div class="row">
                               <div class="col-sm-12">
-                                <form role="form">
+
+                                <?php
+
+                                if (isset($_COOKIE['student'],
+                                          $_POST['courses_id']
+                                    )) {
+                                    $courses_id  = $_POST['courses_id'];
+
+                                    $response    = $quiz->ViewDataQuiz($courses_id);
+                                    $_SESSION['courses_id'] = $_POST['courses_id'];
+                                    $_SESSION['question'] = array();
+                                    $_SESSION['no'] = 1;
+                                    $_SESSION['score'] = 0;
+                                    $_SESSION['option'] = array();
+                                    $_SESSION['answer'] = array();
+
+                                    foreach ($response as $key => $value) {
+                                      $_SESSION['question'][] = $value->question;
+                                      $_SESSION['option'][] = array($value->a, $value->b, $value->c, $value->d);
+                                      $_SESSION['answer'][] = $value->answer;
+                                    }
+                                }
+
+                                 ?>
+
+                                <form role="form" id="form-start-quiz" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
                                     <div class="form-group">
                                       <label>Subject ID</label>
-                                      <select name="subject-id" class="form-control">
-                                        <option value="">Select</option>
-                                        <option value="">BIT106</option>
-                                        <option value="">BIT109</option>
-                                        <option value="">BIT101</option>
-                                      </select>
-                                    </div>
-                                    <div class="form-group">
-                                      <label>Number</label>
-                                      <select name="subject-id" class="form-control">
-                                        <option value="">Select</option>
-                                        <option value="">1</option>
-                                        <option value="">2</option>
+                                      <select name="courses_id" class="form-control">
                                       </select>
                                     </div>
                                     <div>
-                                        <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit"><strong>Submit</strong></button>
+                                        <button class="btn btn-sm btn-primary pull-right m-t-n-xs" type="submit" name="btn-start-quiz">Submit</button>
                                     </div>
                                 </form>
                               </div>
@@ -147,7 +167,7 @@
                       </div>
                   </div>
               </div>
-              <div class="col-lg-7">
+              <div class="col-lg-12 quiz">
                   <div class="ibox float-e-margins">
                       <div class="ibox-title">
                           <h5>Quiz</h5>
@@ -160,61 +180,77 @@
                               </a>
                           </div>
                       </div>
-                      <div class="ibox-content">
+                      <div class="ibox-content ">
                           <div class="row">
                               <div class="col-sm-12">
-                                <div class="table-responsive">
-                                  <table class="table shoping-cart-table">
-                                    <tbody>
-                                    <tr>
-                                        <td colspan="4" class="desc">
-                                            <h3>
-                                            <a href="#" class="text-navy">
-                                                Programming
-                                            </a>
-                                            </h3>
-                                            <p class="small">
-                                                It is a long established fact that a reader will be distracted by the readable
-                                                content of a page when looking at its layout. The point of using Lorem Ipsum is
-                                            </p>
-                                            <dl class="small m-b-none">
-                                                <dt>Description </dt>
-                                                <dd>A description list is perfect for defining terms.</dd>
-                                            </dl>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                          <span class="label label-default">A</span>
-                                            <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios"> I'm Fine
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                      <td >
-                                        <span class="label label-default">B</span>
-                                          <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios"> I'm Right
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td>
-                                        <span class="label label-default">C</span>
-                                        <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios"> I'm Happy
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td>
-                                        <span class="label label-default">D</span>
-                                        <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios"> I'm ALone
-                                      </td>
-                                    </tr>
-                                    </tbody>
-                                  </table>
-                                  <hr />
-                                  <div class="">
-                                    <button type="button" class='btn btn-primary' name="button">Next</button>
-                                    <span class="pull-right">1 of 25</span>
-                                  </div>
-                                </div>
+
+                                <?php
+
+                                if (isset($_SESSION['question'])){
+
+                                $question = $_SESSION['question'];
+                                $no       = $_SESSION['no'];
+                                $option   = $_SESSION['option'];
+                                $answer   = $_SESSION['answer'];
+
+
+                                if (isset($_POST['next'])){
+                                    $_SESSION['answer'][] = $_POST['option'];
+
+                                    if ($_POST['option'] == $answer[$no-2]){
+
+                                        $_SESSION['score'] = $_SESSION['score'] + 10;
+
+                                    }
+
+                                }
+
+
+
+                                if (isset($question[$no-1])){
+                                 ?>
+                                 <a href="quiz.php">Replay from begin</a>
+                                 <form action="" method="POST">
+                                    <p>
+                                    <?php
+                                        $a = $no-1;
+                                        echo $no.". ";
+                                        $_SESSION['no']++;
+                                        echo $question[$a];
+                                        $answers = $_SESSION['option'][$a];
+                                        shuffle($answers);
+                                    ?>
+                                    </p>
+
+                                    <?php
+                                        for ($i=0; $i < 4; $i++) {
+                                    ?>
+
+                                    <div class="form-group">
+                                        <input type="radio" name="option" value="<?php echo $answers[$i]; ?>" required/> <?php echo $answers[$i]; ?></br>
+                                    </div>
+
+                                    <?php
+
+                                        }
+                                     ?>
+
+                                    <button class="btn btn-sm btn-primary pull-left m-t-n-xs" type="submit" name="next" value="next">Next</button>
+                                </form>
+                                <?php } else { ?>
+
+                                <h3 class="text-center text-navy">Your Score is <?php echo $_SESSION['score']; ?> </h3>
+
+                                <?php
+
+                                  $courses_id       = $_SESSION['courses_id'];
+                                  $score            = $_SESSION['score'];
+                                  $student_id       = $_COOKIE['student'];
+                                  $student_data_id  = $quiz->getStudentDataID($student_id, $courses_id);
+                                  $quiz->AddQuizScore($student_data_id, $score);
+                                }
+                              }
+                                ?>
                               </div>
                           </div>
                       </div>
@@ -243,21 +279,22 @@
 <script src="assets/js/theme.js"></script>
 <script src="assets/js/plugins/pace/pace.min.js"></script>
 
-<!-- Data picker -->
-<script src="assets/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<!-- FormValidation plugin and the class supports validating Bootstrap form -->
+<script src="assets/js/formValidation.min.js"></script>
+<script src="assets/js/framework/bootstrap.min.js"></script>
 
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('#data_2 .input-group.date').datepicker({
-        startView: 1,
-        todayBtn: "linked",
-        keyboardNavigation: false,
-        forceParse: false,
-        autoclose: true,
-        format: "dd/mm/yyyy"
-      });
-  });
-</script>
+<!-- Ladda -->
+<script src="assets/js/plugins/ladda/spin.min.js"></script>
+<script src="assets/js/plugins/ladda/ladda.min.js"></script>
+<script src="assets/js/plugins/ladda/ladda.jquery.min.js"></script>
+
+<!-- FooTable -->
+<script src="assets/js/plugins/footable/footable.all.min.js"></script>
+
+<!-- Quiz -->
+<script src="assets/js/page/quiz.js"></script>
+
+
 
 </body>
 </html>

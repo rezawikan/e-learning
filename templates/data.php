@@ -5,10 +5,12 @@ require_once 'vendor/autoload.php';
 use Elearn\Auth\Authentication;
 use Elearn\Database\Database;
 use Elearn\Auth\Redirect;
+use Elearn\Quiz\Quiz;
 
 
 // initialize classes
 $log        = new Authentication;
+$quiz       = new Quiz;
 
 if (!$log->is_logged_in()) {
     Redirect::to('index.php');

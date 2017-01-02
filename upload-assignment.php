@@ -34,9 +34,6 @@
             <ul class="nav metismenu" id="side-menu">
                 <li class="nav-header">
                     <div class="dropdown profile-element">
-                            <span>
-                                <img alt="image" class="img-circle" src="assets/img/profile_small.jpg" />
-                            </span>
                             <a href="#">
                                 <span class="clear">
                                     <span class="block m-t-xs"> <strong class="font-bold"><?php echo $user->fullName; ?></strong></span>
@@ -64,7 +61,7 @@
                   <a href="#"><i class="fa fa-exchange"></i> <span class="nav-label">Assignment</span> </a>
                   <ul class="nav nav-second-level collapse">
                     <li class="active">
-                      <a href="upload-assignment.php">Upload Assignment</a>
+                      <a href="#.php">Upload Assignment</a>
                     </li>
                     <li>
                         <a href="assignment.php"> View Assignment</a>

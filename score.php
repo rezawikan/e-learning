@@ -62,7 +62,7 @@
                   </ul>
                 </li>
                 <li class="active">
-                    <a href="Score.php"><i class="fa fa-area-chart"></i> <span class="nav-label">Score</span> </a>
+                    <a href="#"><i class="fa fa-area-chart"></i> <span class="nav-label">Score</span> </a>
                 </li>
                 <li>
                     <a href="quiz.php"><i class="fa fa-users"></i> <span class="nav-label">Quiz</span> </a>
@@ -132,76 +132,19 @@
                                   <th>Assignment 2</th>
                                 </tr>
                                 </thead>
-                                <tbody>
-                                  <tr class="ScoreX">
+                                <tbody id="data-score">
+                                  <!-- <tr class="ScoreX">
                                       <td>BIT308</td>
                                       <td>Technology Information</td>
                                       <td>100</td>
                                       <td>95</td>
                                       <td class="center">Complete</td>
                                       <td class="center">Complete</td>
-                                  </tr>
-                                  <tr class="ScoreC">
-                                      <td>BIT306</td>
-                                      <td>Introduction Programming C++</td>
-                                      <td>100</td>
-                                      <td>95</td>
-                                      <td class="center">Complete</td>
-                                      <td class="center">Complete</td>
-                                  </tr>
-                                  <tr class="ScoreA">
-                                      <td>BIT301</td>
-                                      <td>Web Interface</td>
-                                      <td>100</td>
-                                      <td>95</td>
-                                      <td class="center">Complete</td>
-                                      <td class="center">Complete</td>
-                                  </tr>
-                                  <tr class="ScoreA">
-                                      <td>BIT310</td>
-                                      <td>Programming Java</td>
-                                      <td>100</td>
-                                      <td>95</td>
-                                      <td class="center">Complete</td>
-                                      <td class="center">Complete</td>
-                                  </tr>
-
-                                  <tr class="ScoreA">
-                                      <td>BIT201</td>
-                                      <td>Software Engineering</td>
-                                      <td>100</td>
-                                      <td>95</td>
-                                      <td class="center">Complete</td>
-                                      <td class="center">Complete</td>
-                                  </tr>
-                                  <tr class="ScoreA">
-                                      <td>BIT206</td>
-                                      <td>English 1</td>
-                                      <td>100</td>
-                                      <td>95</td>
-                                      <td class="center">Complete</td>
-                                      <td class="center">Complete</td>
-                                  </tr>
-                                  <tr class="ScoreA">
-                                      <td>BIT306</td>
-                                      <td>Web Publishing</td>
-                                      <td>100</td>
-                                      <td>95</td>
-                                      <td class="center">Complete</td>
-                                      <td class="center">Complete</td>
-                                  </tr>
-                                  <tr class="ScoreA">
-                                      <td>BIT108</td>
-                                      <td>Programming Python</td>
-                                      <td>100</td>
-                                      <td>95</td>
-                                      <td class="center">Complete</td>
-                                      <td class="center">Complete</td>
-                                  </tr>
+                                  </tr> -->
                                 </tbody>
                                 <tfoot>
                                 <tr>
-                                  <td colspan="5">
+                                  <td colspan="6">
                                       <ul class="pagination pull-right"></ul>
                                   </td>
                                 </tr>

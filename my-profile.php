@@ -51,7 +51,7 @@
                     <a href="home.php"><i class="fa fa-th-large"></i> <span class="nav-label">Home</span></a>
                 </li>
                 <li class="active">
-                    <a href="my-profile.php"><i class="fa fa-user"></i> <span class="nav-label">My Profile</span> </a>
+                    <a href="#"><i class="fa fa-user"></i> <span class="nav-label">My Profile</span> </a>
                 </li>
                 <li>
                     <a href="list-enrollments.php"><i class="fa fa-book"></i> <span class="nav-label">List Enrollments</span> </a>

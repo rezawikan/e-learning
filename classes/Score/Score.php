@@ -16,7 +16,7 @@ class Score
 	}
 
 
-  public function ViewDataScore($tutors_id)
+  public function ViewDataScore($student_id)
   {
     try {
         $user = $this->conn;
@@ -25,7 +25,7 @@ class Score
         ->join('student_data','enrollments.student_data_id','=','student_data.id')
         ->join('students','enrollments.student_id','=','students.id')
         ->select('courses.name, courses.subject_id, students.id, students.first_name, students.last_name, student_data.quiz, student_data.assignment_one, student_data.assignment_two')
-        ->where('tutors_id','=', $tutors_id)
+        ->where('enrollments.student_id','=', $student_id)
         ->all();
 
         if ($result == null){

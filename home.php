@@ -1,3 +1,4 @@
+<?php require_once 'templates/data.php'; ?>
 <!DOCTYPE html>
 <html>
 
@@ -14,6 +15,9 @@
     <link href="assets/css/animate.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 
+    <!-- FooTable -->
+    <link rel="stylesheet" href="assets/css/plugins/footable/footable.core.css">
+
 </head>
 
 <body>
@@ -23,12 +27,9 @@
             <ul class="nav metismenu" id="side-menu">
                 <li class="nav-header">
                     <div class="dropdown profile-element">
-                            <span>
-                                <img alt="image" class="img-circle" src="assets/img/profile_small.jpg" />
-                            </span>
                             <a href="#">
                                 <span class="clear">
-                                    <span class="block m-t-xs"> <strong class="font-bold">Daniel Toms</strong></span>
+                                    <span class="block m-t-xs"> <strong class="font-bold"><?php echo $user->fullName; ?></strong></span>
                                     <span class="text-muted text-xs block">Student</span>
                                 </span>
                             </a>
@@ -89,11 +90,38 @@
         </div>
         <div class="wrapper wrapper-content animated fadeInRight">
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="text-center m-t-lg">
-                        <h1>Welcome in Student E-Learning</h1>
+              <div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>News</h5>
+                        <div class="ibox-tools">
+                            <a class="collapse-link">
+                                <i class="fa fa-chevron-up"></i>
+                            </a>
+                            <a class="close-link">
+                                <i class="fa fa-times"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                      <!-- Table -->
+                      <div class="table-responsive">
+                          <table class="footable table table-stripped shoping-cart-table" data-page-size="6" data-filter=#filter>
+                              <tbody id="data-news">
+                                  <!-- Data -->
+                              </tbody>
+                              <tfoot>
+                              <tr>
+                                <td colspan="2">
+                                    <ul class="pagination pull-right"></ul>
+                                </td>
+                              </tr>
+                              </tfoot>
+                          </table>
+                      </div>
                     </div>
                 </div>
+              </div>
             </div>
         </div>
         <div class="footer">
@@ -114,6 +142,12 @@
 <!-- Custom and plugin javascript -->
 <script src="assets/js/theme.js"></script>
 <script src="assets/js/plugins/pace/pace.min.js"></script>
+
+<!-- FooTable -->
+<script src="assets/js/plugins/footable/footable.all.min.js"></script>
+
+<!-- Enrollments -->
+<script src="assets/js/page/home.js"></script>
 
 
 </body>

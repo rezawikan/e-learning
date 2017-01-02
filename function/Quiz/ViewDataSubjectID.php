@@ -2,15 +2,15 @@
 session_start();
 require_once '../../vendor/autoload.php';
 
-use Elearn\Score\Score;
+use Elearn\Quiz\Quiz;
 use Elearn\Auth\Redirect;
 
 
-$student = new Score;
+$student = new Quiz;
 
 if (isset($_COOKIE['student'])) {
-    $id       = $_COOKIE['student'];
-    $response = $student->ViewDataScore($id);
+    $student_id = $_COOKIE['student'];
+    $student->ViewDataTutorsID($student_id);
 
 } else {
     Redirect::to('index.php'); // for direct acces to this file

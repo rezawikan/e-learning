@@ -6,11 +6,11 @@ use Elearn\Assignment\Assignment;
 use Elearn\Auth\Redirect;
 
 
-$tutor = new Assignment;
+$student = new Assignment;
 
 if (isset($_COOKIE['student'])) {
     $student_id = $_COOKIE['student'];
-    $tutor->ViewDataTutorsID($student_id);
+    $student->ViewDataTutorsID($student_id);
 
 } else {
     Redirect::to('index.php'); // for direct acces to this file

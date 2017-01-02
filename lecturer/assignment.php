@@ -186,7 +186,7 @@
           </div>
         </div>
 
-        <!-- Start Modals Edit Lecturer -->
+        <!-- Start Modals Edit Assignment -->
         <div id="modal-form-update" class="modal fade" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -213,7 +213,7 @@
                 </div>
             </div>
         </div>
-        <!-- End Modals Edit Lecturer -->
+        <!-- End Modals Edit Assignment -->
 
         <!-- Starts Modals Confirmation Delete -->
               <div id="modal-form-delete" class="modal fade" aria-hidden="true">

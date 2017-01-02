@@ -155,6 +155,9 @@
                             </div>
                         </div>
                         <div class="ibox-content">
+                          <div id="message">
+
+                          </div>
                           <input type="text" class="form-control input-sm m-b-xs" id="filter" placeholder="Search">
                           <table class="footable table table-stripped" data-page-size="10" data-filter=#filter>
                                 <thead>
@@ -197,6 +200,56 @@
                 </div>
             </div>
         </div>
+
+        <!-- Start Modals Edit Assignment -->
+        <div id="modal-form-update" class="modal fade" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h3 class="m-t-none m-b">Edit Lecturer</h3>
+                                <p>Make sure your data</p>
+
+                                <form role="form" id="form-data-update" method="POST">
+
+                                  <!-- Form Quiz -->
+                                  <?php include 'templates/part/form-quiz.php'; ?>
+
+                                    <input type="hidden" name="id" class="form-control">
+                                    <div>
+                                      <button class="btn btn-sm btn-primary ladda-button padding-btn" data-style="expand-right" type="submit" name="btn-update-quiz">OK</button>
+                                      <button id="cancel-btn-update" class="btn btn-sm btn-primary padding-btn" type="submit">Cancel</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Modals Edit Assignment -->
+
+        <!-- Starts Modals Confirmation Delete -->
+              <div id="modal-form-delete" class="modal fade" aria-hidden="true">
+                  <div class="modal-dialog">
+                      <div class="modal-content">
+                          <div class="modal-body">
+                              <div class="row">
+                                  <div class="col-sm-12">
+                                      <h3 class="m-t-none m-b">Delete Confirmation</h3>
+                                      <div id="confirm"></div>
+                                      <div>
+                                          <button id="sure" type="button" name="btn-delete" class="btn btn-primary padding-btn ladda-button" type="submit" data-style="expand-right">Ok</button>
+                                          <button id="cancel" type="button" class="btn btn-primary padding-btn">Cancel</button>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- End Modals Confirmation Delete-->
 
         <div class="footer">
             <div class="pull-right">
