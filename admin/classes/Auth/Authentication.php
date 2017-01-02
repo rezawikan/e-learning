@@ -102,7 +102,7 @@ class Authentication
 							setcookie('admin', $result->id, time() + (86400 * 30), "/");
 							$status['success'] = 'login successfully';
 					} else {
-						$status['wrong'] = 'your password is wrong'.$password;
+						$status['wrong'] = 'your password is wrong';
 					}
 			} else {
 					$status['notfound'] = 'Not found, do you have account?';

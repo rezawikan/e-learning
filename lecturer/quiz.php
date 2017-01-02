@@ -38,7 +38,7 @@
                     <div class="dropdown profile-element">
                             <a href="#">
                                 <span class="clear">
-                                    <span class="block m-t-xs"> <strong class="font-bold">John Low</strong></span>
+                                    <span class="block m-t-xs"> <strong class="font-bold"><?php echo $user->fullName; ?></strong></span>
                                     <span class="text-muted text-xs block">Lecturer</span>
                                 </span>
                             </a>

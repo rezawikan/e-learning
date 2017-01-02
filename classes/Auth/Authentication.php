@@ -22,92 +22,6 @@ class Authentication
 		$this->conn = Database::getInstance();
 	}
 
-	// // check match password
-	// public function checkPassword($fpassword, $spassword)
-	// {
-	// 	if ($fpassword != $spassword) {
-	// 			return false;
-	// 	} else {
-	// 			return true;
-	// 	}
-	// }
-	//
-	// // checkbox check
-	// public function checkedBox($checkbox)
-	// {
-	// 	if (isset($checkbox) && $checkbox != "") {
-  //   		return true;
-	// 	}	else {
-	// 			return false;
-	// 	}
-	// }
-	//
-
-	// Check Available Username
-	public function checkUser($username)
-	{
-		try {
-			$user = $this->conn;
-			$user->setTable('students');
-			$result = $user->select()->where('username','=',$username)->first();
-
-			if($result == null){
-				return true;
-			}else {
-				return false;
-			}
-		}catch(PDOException $e){
-			echo "Error : ". $e->getMessage();
-		}
-	}
-
-	// Check Available Email
-	public function checkEmail($email)
-	{
-		try {
-				$user = $this->conn;
-				$user->setTable('students');
-				$result = $user->select()->where('email','=',$email)->first();
-
-				if ($result == null) {
-						return true;
-				} else {
-						return false;
-			}
-		}catch(PDOException $e){
-			echo "Error : ". $e->getMessage();
-		}
-	}
-
-	// Register
-
-	public function register($email, $username, $firstName, $lastName, $gender, $date, $password)
-	{
-		try {
-				$pass = password_hash($password, PASSWORD_DEFAULT);
-				$user = $this->conn;
-				$user->setTable('students');
-				$result = $user->create([
-					'email' 					=> $email,
-					'username'				=> $username,
-					'first_name'			=> $firstName,
-					'last_name'				=> $lastName,
-					'gender'					=> $gender,
-					'date_of_birth'		=> $date,
-					'password'				=> $pass,
-					'create_at' 			=> date_format(new DateTime(), 'Y-m-d H:i:s')
-				]);
-
-				if ($result == null) {
-						return true;
-				} else {
-						return false;
-			}
-		}catch(PDOException $e){
-			echo "Error : ". $e->getMessage();
-		}
-	}
-
 
 	// user login
 	public function login($username, $password)
@@ -123,7 +37,7 @@ class Authentication
 							setcookie('student', $result->id, time() + (86400 * 30), "/");
 							$status['success'] = 'login successfully';
 					} else {
-						$status['wrong'] = 'your password is wrong'.$password;
+						$status['wrong'] = 'your password is wrong';
 					}
 			} else {
 					$status['notfound'] = 'Not found, do you have account?';
